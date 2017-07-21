@@ -1,0 +1,37 @@
+/*
+ * Tema 04
+ * 
+ * Modifica cores e detalhes da página
+ * 
+ * Cor principal: #A2D92B 
+ * 
+ */
+
+/* Cor de fundo do site */
+body {
+    background-color: #262621;
+}
+
+/* Seleção de texto */
+
+::-moz-selection { background: #A2D92B;text-shadow: none;color: #666; }
+
+::-webkit-selection { background: #A2D92B;text-shadow: none;color: #666; }
+
+::selection { background: #A2D92B;text-shadow: none;color: #666; }
+
+/* Container dos temas */
+
+#themes { background-color: #A2D92B; }
+
+/* icones das redes sociais */
+
+#social-links a, .skills-list li { color: #8b8b8b; }
+
+#social-links a:hover { color: #FFF; }
+
+/* tags */
+
+.skills-list li:nth-child(even) { color: #A2D92B; }
+
+.tagline .name { color: #FFF; }

@@ -1,0 +1,170 @@
+/*
+ * Tema 03
+ */
+
+@import "mixins";
+@import "var";
+
+ // Cor de fundo do site
+
+body {
+    background-color: $base-color-03;
+    padding: 0 0 1em 0;
+}
+
+// Seleção de texto 
+::-moz-selection { background: $base-color-03; text-shadow: none;color: #666; }
+::-webkit-selection { background: $base-color-03; text-shadow: none;color: #666; }
+::selection { background: $base-color-03; text-shadow: none;color: #666; }
+
+// Seções com fundo escuro 
+#skills, #social, #copyright {
+    background-color: $base-bg-color-03;
+    //background-color: #000113;
+}
+
+#copyright {
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 0 2em 0;
+    text-align: center;
+    color: #8b8b8b;
+}
+
+/* CONTENT */
+
+.skills.wrapper { padding: 10% 0; }
+
+.skills-list {
+    font: {
+        family: 'Oswald', Arial, Helvetica, sans-serif;
+        size: 4.2em;
+        weight: 400;
+    }
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 .5em 0;
+    li {
+        display: inline-block;
+        color: #839098;
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+        &:nth-child(odd) {
+            color: $base-color-03;
+        }
+    }
+}
+
+// Não exibir títulos nesse tema
+.skills-title { display: none; }
+
+.tagline .name { color: #DFE2D7 !important; }
+
+/* SOCIAL / ICOMOON */
+
+.social-links {
+    font-size: 4em;
+    padding: 0 0 .5em 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        height: 1.8em;
+        width: 1.8em;
+    }
+    .icon-alone {
+        color: #839098;        
+        display: inline-block;
+        height: 100%;
+        line-height: 1.9em;
+        text-decoration: none;
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s;
+        &:hover {
+            color: #FFF;
+        }
+    }    
+}
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* THEMES */
+
+.themes-bar {
+    left: 0;
+    position: absolute;
+    top: 2em;
+    width: 100%;
+}
+
+.styleswitcher {
+    width: 100%;
+    margin: 0 auto;
+    height: 4em;
+    li {
+        padding: 1em 0.5em;
+        width: 33%;
+        display: inline-block;
+        -webkit-transition: padding 0.2s;
+        -moz-transition: padding 0.2s;
+        -o-transition: padding 0.2s;
+        transition: padding 0.2s;
+        &:hover {
+            padding: 0;
+        }
+    }
+
+    .lt-ie9 & li {
+        display: inline;
+    }
+}
+
+.styleswitcher li, .theme-btn {
+    height: 100%;
+    @include box-sizing;
+}
+
+.theme-btn {
+    display: block;
+}
+
+/* -------------------------------------------------------
+ MEDIA QUERIES
+ -------------------------------------------------------*/
+
+@include respond-to(small-screens) {
+    .themes-bar {top: 0; }
+
+    .styleswitcher {
+        height: 3em;
+        width: 100%;
+        li { padding: 0 0.2em; }
+    }
+    .tagline .name { display: block; }
+}
+
+@include respond-to(medium-screens) {
+
+    .styleswitcher { width: 25%; }
+
+    .wrapper { width: 70%; }
+
+    .skills.wrapper { padding: 11% 0 9%; }
+
+    .skills-list { margin: 0; }
+
+    // skill levels 
+
+    .beginner { font-size: 40%; }
+    .basic { font-size: 60%; }
+    .intermediate { font-size: 80%; }
+    // .advanced {}
+}

@@ -1,0 +1,29 @@
+// Mixins
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Media Queries
+@mixin respond-to($media) {
+  @if $media == small-screens {
+    @media only screen and (max-width: 640px) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: 1367px) { @content; }
+  }
+}
+
+// from https://github.com/adambom/CSS3-Please-for-SASS
+@mixin rotate($degrees) {
+     -moz-transform: rotate(#{$degrees}deg);  /* FF3.5+ */
+       -o-transform: rotate(#{$degrees}deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(#{$degrees}deg);  /* Saf3.1+, Chrome */
+      -ms-transform: rotate(#{$degrees}deg);  /* IE9 */
+          transform: rotate(#{$degrees}deg);
+}

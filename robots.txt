@@ -1,0 +1,9 @@
+# robotstxt.org/
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /labs/
+Disallow: /projetos/
+Disallow: /projects/
+Disallow: /v3/
+Disallow: /assets/

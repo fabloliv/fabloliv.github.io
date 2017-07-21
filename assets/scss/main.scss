@@ -1,0 +1,23 @@
+@import "mixins";
+@import "var";
+@import "normalize";
+@import "fonts";
+
+/* Estilos básicos */
+
+/* STYLESWITCHER */
+
+.theme01 {background-color: $base-color-01;}
+
+.theme02 {background-color: $base-color-02;}
+
+.theme03 {background-color: $base-color-03;}
+
+.theme04 {background-color: $base-color-04;}
+
+@import "helper";
+
+@include respond-to(wide-screens) {
+    body {font-size: 100%; }
+    .wrapper { max-width: 96em; }
+}
