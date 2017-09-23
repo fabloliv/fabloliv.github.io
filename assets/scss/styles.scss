@@ -11,6 +11,10 @@
  * https://github.com/jaydenseric/Fix
 */
 
+.testing {
+    width: percentage(8/7);
+}
+
 
 /* # =================================================================
    # Global selectors
@@ -18,28 +22,34 @@
 
 html {
     box-sizing: border-box;
-    overflow-y: scroll; /* All browsers without overlaying scrollbars */
-    -webkit-text-size-adjust: 100%; /* iOS 8+ */
+    overflow-y: scroll;
+    /* All browsers without overlaying scrollbars */
+    -webkit-text-size-adjust: 100%;
+    /* iOS 8+ */
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
 }
 
-*, ::before, ::after {
+*,
+ ::before,
+ ::after {
     background-repeat: no-repeat;
     /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
     box-sizing: inherit;
 }
 
-::before, ::after {
+::before,
+ ::after {
     text-decoration: inherit;
     /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
     vertical-align: inherit;
 }
 
 * {
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -54,7 +64,8 @@ body {
    # General elements
    # ================================================================= */
 
-ul, ol {
+ul,
+ol {
     padding-left: 0;
 }
 
@@ -62,13 +73,19 @@ li {
     display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
 }
 
 blockquote {
     padding: 0;
 }
+
 
 /*
 * Correct `block` display not defined for any HTML5 element in IE 8/9
@@ -77,12 +94,22 @@ blockquote {
 * Correct `block` display not defined for `main` in IE 11
 */
 
-article, aside, figcaption, figure, footer, header, main, nav, section {
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
     display: block;
 }
 
-[hidden], template {
-    display: none; /* Add the correct display in IE */
+[hidden],
+template {
+    display: none;
+    /* Add the correct display in IE */
 }
 
 abbr[title] {
@@ -93,22 +120,29 @@ abbr[title] {
 }
 
 a {
-    background-color: transparent; /* Remove the gray background on active links in IE 10 */
-    -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+    background-color: transparent;
+    /* Remove the gray background on active links in IE 10 */
+    -webkit-text-decoration-skip: objects;
+    /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
     text-decoration: none;
     color: inherit;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
     outline-width: 0;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
     font-family: monospace, monospace;
     /* Specify the font family of code elements */
 }
 
-b, strong {
+b,
+strong {
     font-weight: bold;
 }
 
@@ -157,6 +191,7 @@ svg:not(:root) {
     text-shadow: none;
 }
 
+
 /* # =================================================================
    # Fonts
    # ================================================================= */
@@ -180,7 +215,8 @@ svg:not(:root) {
     -webkit-font-smoothing: antialiased
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: none;
@@ -189,7 +225,6 @@ svg:not(:root) {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -219,15 +254,35 @@ svg:not(:root) {
     content: "\e005"
 }
 
+
 /* # =================================================================
    # Helpers
    # ================================================================= */
 
-.wrapper { margin-left: auto; margin-right: auto; position: relative;}
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
 
-.inlineblock {display: -moz-inline-stack;display: inline-block;vertical-align: top;*display: inline;*zoom: 1;}
+.inlineblock {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+}
 
-.visuallyhidden {border: 0;clip: rect(0, 0, 0, 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 .screen-reader-text {
     position: absolute;
@@ -235,19 +290,44 @@ svg:not(:root) {
     left: -9999px;
 }
 
-.hidden {display: none !important;visibility: hidden;}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
 
-.ir {background-color: transparent;border: 0;overflow: hidden;*text-indent: -9999px}
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px
+}
 
-.ir:before {content: "";display: block;width: 0;height: 150%}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%
+}
 
-.cf:before, .cf:after {content: " ";display: table}
-.cf:after {clear: both}
-.cf {*zoom: 1}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table
+}
+
+.cf:after {
+    clear: both
+}
+
+.cf {
+    *zoom: 1
+}
+
 
 /* modern clearfix */
+
 .group:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
