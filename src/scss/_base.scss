@@ -1,5 +1,8 @@
 // Descriptive color variables
 $violet: rgb(12, 6, 30); // Violet - body background
+//$violet: hsl(255, 66.7%, 7.1%); // Violet - body background
+//$violet: hsl(268.9, 73%, 14.5%);
+//$violet: RGB(26, 0, 51);
 $eminence: rgb(122, 42, 141); // Eminence - buttons background
 $rose: rgb(231, 3, 136); // Rose - for titles and text
 $moonMist: rgb(223, 226, 215); // Moon Mist - lighter color for text
@@ -16,9 +19,21 @@ $color-text-base: $pictonBlue;
 $roboto-font-stack: "Roboto",Arial,"Helvetica Neue",Helvetica, sans-serif !default;
 $oswald-font-stack: "Oswald",sans-serif !default;
 
+// Functions
+@function em($pixels, $context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1em;
+}
+
 body {
     font-size: 10px;
-    font-size: 1em;
     font-size: 1rem;
     line-height: 1em;
     font-weight: 400;
@@ -30,32 +45,115 @@ body {
     -webkit-transform: translate3d(0, 0, 0);
 }
 
-.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    width: 70%;
-    background-color: #000
-}
-
 div[class*="container"] {
     width: 90%;
     margin: 0 auto;
 }
 
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 70%;
+}
+
 .tagline-container {
     .wrapper {
         padding: 10em 0;
+        border-bottom: 2px $color-main solid;
     }
-    .name {
+
+    h1 {
         font-family: $oswald-font-stack;
         color: $color-main;
         text-transform: uppercase;
         font-size: 4em;
+        line-height: 1em;
     }
+
+    h2 {
+        font-family: $roboto-font-stack;
+        color: $color-text-base;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: em(28, 10);
+        line-height: em(60, 28);
+        padding: 0 0 em(30, 28) 0;
+    }
+
     p {
-        font-size: 1.8em;
-        line-height: 32/18;
+        font-size: em(20, 10);
+        line-height: em(32, 20);
     }
-    .social-links {}
 }
+
+.social-links {
+    padding: em(70, 10) 0 0 0;
+    li {
+        display: inline-block;
+        margin: 1em;
+    }
+    .icon {
+        background-color: $color-text-light;
+        display: block;
+        font-size: em(27px, 10);
+        width: em(42, 27);
+        height: em(42, 27);
+        line-height: em(42, 27);
+        border-radius: 50%;
+        color: $color-body;
+
+        -webkit-transition: color 300ms, background-color 300ms;
+        transition: color 300ms, background-color 300ms;
+
+        &:hover {
+            color: #FFF;
+        }
+
+        &.icon-github {
+            &:hover {
+                background-color: #171516;
+            }
+        }
+
+        &.icon-linkedin2 {
+            &:hover {
+                background-color: #007bb6;
+            }
+        }
+
+        &.icon-facebook {
+            &:hover {
+                background-color: #3b5998;
+            }
+        }
+
+        &.icon-twitter {
+            &:hover {
+                background-color: #00aced;
+            }
+        }
+
+        &.icon-google-plus {
+            &:hover {
+                background-color: #dd4b39;
+            }
+        }
+    }
+}
+/*
+.socialnav .socialnavitem--twitter:hover {
+    background: #00aced;
+}
+
+.socialnav .socialnavitem--facebook:hover {
+    background: #3b5998;
+}
+
+.socialnav .socialnavitem--linkedin:hover {
+    background: #007bb6;
+}
+
+.socialnav .socialnavitem--googleplus:hover {
+    background: #dd4b39;
+}*/
