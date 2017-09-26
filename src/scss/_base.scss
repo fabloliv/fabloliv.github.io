@@ -1,0 +1,61 @@
+// Descriptive color variables
+$violet: rgb(12, 6, 30); // Violet - body background
+$eminence: rgb(122, 42, 141); // Eminence - buttons background
+$rose: rgb(231, 3, 136); // Rose - for titles and text
+$moonMist: rgb(223, 226, 215); // Moon Mist - lighter color for text
+$pictonBlue: rgb(35, 192, 236); // Picton Blue -text and background color
+
+// Functional color variables
+$color-body: $violet;
+$color-buttons: $eminence;
+$color-main: $rose;
+$color-text-light: $moonMist;
+$color-text-base: $pictonBlue;
+
+// Font stack
+$roboto-font-stack: "Roboto",Arial,"Helvetica Neue",Helvetica, sans-serif !default;
+$oswald-font-stack: "Oswald",sans-serif !default;
+
+body {
+    font-size: 10px;
+    font-size: 1em;
+    font-size: 1rem;
+    line-height: 1em;
+    font-weight: 400;
+    text-align: center;
+    font-family: $roboto-font-stack;
+    color: $color-text-light;
+    background-color: $color-body;
+    // Background error: In Chrome 61, CSS-created shapes are slightly lighter than the background color set for the "body" tag.
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 70%;
+    background-color: #000
+}
+
+div[class*="container"] {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tagline-container {
+    .wrapper {
+        padding: 10em 0;
+    }
+    .name {
+        font-family: $oswald-font-stack;
+        color: $color-main;
+        text-transform: uppercase;
+        font-size: 4em;
+    }
+    p {
+        font-size: 1.8em;
+        line-height: 32/18;
+    }
+    .social-links {}
+}
