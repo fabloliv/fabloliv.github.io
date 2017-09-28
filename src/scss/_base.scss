@@ -59,7 +59,7 @@ div[class*="container"] {
 
 .tagline-container {
     .wrapper {
-        padding: 10em 0;
+        padding: 9em 0 8em;
         border-bottom: 2px $color-main solid;
     }
 
@@ -67,28 +67,33 @@ div[class*="container"] {
         font-family: $oswald-font-stack;
         color: $color-main;
         text-transform: uppercase;
-        font-size: 4em;
+        font-size: em(50px, 10);
         line-height: 1em;
     }
 
     h2 {
         font-family: $roboto-font-stack;
         color: $color-text-base;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: em(28, 10);
-        line-height: em(60, 28);
-        padding: 0 0 em(30, 28) 0;
+        // font-weight: 400;
+        // text-transform: uppercase;
+        // font-size: em(28, 10);
+        // line-height: em(60, 28);
+        // padding: 0 0 em(30, 28) 0;
+
+        font-weight: 700;
+        font-size: em(26px, 10);
+        line-height: 160%;
+        padding: em(10px, 26) 0 em(50px, 26);
     }
 
     p {
-        font-size: em(20, 10);
-        line-height: em(32, 20);
+        font-size: 2em;
+        line-height: 160%;
     }
 }
 
 .social-links {
-    padding: em(70, 10) 0 0 0;
+    padding: em(50, 10) 0 0 0;
     li {
         display: inline-block;
         margin: 1em;

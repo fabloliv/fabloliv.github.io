@@ -217,7 +217,7 @@ div[class*="container"] {
 }
 
 .tagline-container .wrapper {
-  padding: 10em 0;
+  padding: 9em 0 8em;
   border-bottom: 2px #e70388 solid;
 }
 
@@ -225,27 +225,26 @@ div[class*="container"] {
   font-family: "Oswald", sans-serif;
   color: #e70388;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 5em;
   line-height: 1em;
 }
 
 .tagline-container h2 {
   font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #23c0ec;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 2.8em;
-  line-height: 2.14286em;
-  padding: 0 0 1.07143em 0;
+  font-weight: 700;
+  font-size: 2.6em;
+  line-height: 160%;
+  padding: 0.38462em 0 1.92308em;
 }
 
 .tagline-container p {
   font-size: 2em;
-  line-height: 1.6em;
+  line-height: 160%;
 }
 
 .social-links {
-  padding: 7em 0 0 0;
+  padding: 5em 0 0 0;
 }
 
 .social-links li {
