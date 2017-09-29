@@ -46,57 +46,84 @@ body {
 }
 
 div[class*="container"] {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+    @include respond-to(medium) { width: 90% ;}
 }
 
 .wrapper {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 70%;
+    // width: 70%;
+
+    @include respond-to(medium) { width: 70% ;}
 }
 
-.tagline-container {
+.intro-container {
     .wrapper {
-        padding: 9em 0 8em;
+        // padding: 8em 7em 8em;
+        padding-top: 4em;
+        padding-bottom: 3em;
         border-bottom: 2px $color-main solid;
+
+        @include respond-to(medium) {
+            padding-top: 8em;
+            padding-bottom: 8em;
+            padding-left: 7em;
+            padding-right: 7em;
+        }
+
     }
 
     h1 {
         font-family: $oswald-font-stack;
         color: $color-main;
         text-transform: uppercase;
-        font-size: em(50px, 10);
         line-height: 1em;
+        font-size: em(34, 10);
+        letter-spacing: em(1, 44);
+        @include respond-to(medium) { font-size: em(44, 10); }
     }
 
     h2 {
         font-family: $roboto-font-stack;
         color: $color-text-base;
-        // font-weight: 400;
-        // text-transform: uppercase;
-        // font-size: em(28, 10);
-        // line-height: em(60, 28);
-        // padding: 0 0 em(30, 28) 0;
+        font-weight: 400;
+        font-size: em(20px, 10);
+        line-height: 150%;
+        padding: em(10px, 20) 0 em(20px, 20);
 
-        font-weight: 700;
-        font-size: em(26px, 10);
-        line-height: 160%;
-        padding: em(10px, 26) 0 em(50px, 26);
+        @include respond-to(medium) {
+            font-size: em(22px, 10);
+            font-weight: 700;
+            padding: em(10px, 22) 0 em(40px, 22);
+        }
+
     }
 
     p {
-        font-size: 2em;
-        line-height: 160%;
+        font-size: em(16px, 10);
+        line-height: 150%;
+
+        @include respond-to(medium) {
+            font-size: 2em;
+        }
     }
 }
 
 .social-links {
-    padding: em(50, 10) 0 0 0;
+    padding: em(20, 10) 0 0 0;
+
+    @include respond-to(medium) {
+        padding: em(50, 10) 0 0 0;
+    }
     li {
+        margin: .6em;
         display: inline-block;
-        margin: 1em;
+        @include respond-to(medium) {
+            margin: 1em;
+        }
     }
     .icon {
         background-color: $color-text-light;

@@ -1,17 +1,32 @@
 // Media Queries
+/*
+$bp-small : 24em;
+$bp-med : 46.8em;
+$bp-large : 50em;
+$bp-xl : 73em;*/
+
+$bp-small-portrait: 360px; // 22.5em
+$bp-small-landscape: 640px;
+
+$bp-med-portrait: 600px; // 600px
+$bp-med-landscape: 640px;
+
+$bp-large-tablet: 768px;
+$bp-large-desktop: 1366px;
+
 @mixin respond-to($media) {
-    @if $media==small-screens {
-        @media only screen and (max-width: 640px) {
+    @if $media == small {
+        @media only screen and (max-width: $bp-med-portrait) {
             @content;
         }
     }
-    @else if $media==medium-screens {
-        @media only screen and (min-width: 768px) {
+    @else if $media == medium {
+        @media only screen and (min-width: $bp-med-portrait + 1) {
             @content;
         }
     }
-    @else if $media==wide-screens {
-        @media only screen and (min-width: 1367px) {
+    @else if $media == wide {
+        @media only screen and (min-width: $bp-large-desktop + 1) {
             @content;
         }
     }

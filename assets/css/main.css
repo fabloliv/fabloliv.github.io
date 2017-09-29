@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /*
+$bp-small : 24em;
+$bp-med : 46.8em;
+$bp-large : 50em;
+$bp-xl : 73em;*/
+/*
  * ress.css • v1.2.2
  * MIT License
  * github.com/filipelinhares/ress
@@ -205,51 +210,105 @@ body {
 }
 
 div[class*="container"] {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 601px) {
+  div[class*="container"] {
+    width: 90%;
+  }
 }
 
 .wrapper {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 70%;
 }
 
-.tagline-container .wrapper {
-  padding: 9em 0 8em;
+@media only screen and (min-width: 601px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+
+.intro-container .wrapper {
+  padding-top: 4em;
+  padding-bottom: 3em;
   border-bottom: 2px #e70388 solid;
 }
 
-.tagline-container h1 {
+@media only screen and (min-width: 601px) {
+  .intro-container .wrapper {
+    padding-top: 8em;
+    padding-bottom: 8em;
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+}
+
+.intro-container h1 {
   font-family: "Oswald", sans-serif;
   color: #e70388;
   text-transform: uppercase;
-  font-size: 5em;
   line-height: 1em;
+  font-size: 3.4em;
+  letter-spacing: 0.02273em;
 }
 
-.tagline-container h2 {
+@media only screen and (min-width: 601px) {
+  .intro-container h1 {
+    font-size: 4.4em;
+  }
+}
+
+.intro-container h2 {
   font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #23c0ec;
-  font-weight: 700;
-  font-size: 2.6em;
-  line-height: 160%;
-  padding: 0.38462em 0 1.92308em;
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 150%;
+  padding: 0.5em 0 1em;
 }
 
-.tagline-container p {
-  font-size: 2em;
-  line-height: 160%;
+@media only screen and (min-width: 601px) {
+  .intro-container h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 0.45455em 0 1.81818em;
+  }
+}
+
+.intro-container p {
+  font-size: 1.6em;
+  line-height: 150%;
+}
+
+@media only screen and (min-width: 601px) {
+  .intro-container p {
+    font-size: 2em;
+  }
 }
 
 .social-links {
-  padding: 5em 0 0 0;
+  padding: 2em 0 0 0;
+}
+
+@media only screen and (min-width: 601px) {
+  .social-links {
+    padding: 5em 0 0 0;
+  }
 }
 
 .social-links li {
+  margin: .6em;
   display: inline-block;
-  margin: 1em;
+}
+
+@media only screen and (min-width: 601px) {
+  .social-links li {
+    margin: 1em;
+  }
 }
 
 .social-links .icon {
