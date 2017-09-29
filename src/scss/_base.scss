@@ -60,11 +60,15 @@ div[class*="container"] {
     @include respond-to(medium) { width: 70% ;}
 }
 
+/* # =================================================================
+   # Intro
+   # ================================================================= */
+
 .intro-container {
     .wrapper {
         // padding: 8em 7em 8em;
-        padding-top: 4em;
-        padding-bottom: 3em;
+        padding-top: 5em;
+        padding-bottom: 4em;
         border-bottom: 2px $color-main solid;
 
         @include respond-to(medium) {
@@ -173,19 +177,51 @@ div[class*="container"] {
         }
     }
 }
-/*
-.socialnav .socialnavitem--twitter:hover {
-    background: #00aced;
+
+/* # =================================================================
+   # Skill Cloud
+   # ================================================================= */
+
+.skillcloud-container {
+    .wrapper {
+        padding-top: 5em;
+        padding-bottom: 5em;
+        border-bottom: 2px $color-main solid;
+
+        @include respond-to(medium) {
+            padding-top: 9em;
+            padding-bottom: 9em;
+        }
+        .row {}
+    }
 }
 
-.socialnav .socialnavitem--facebook:hover {
-    background: #3b5998;
+.skill-category {
+    display: none;
 }
 
-.socialnav .socialnavitem--linkedin:hover {
-    background: #007bb6;
-}
+.skill-list {
+    font: {
+        family: $oswald-font-stack;
+        weight: 400;
+    }
+    text-transform: uppercase;
+    font-size: em(20, 10);
 
-.socialnav .socialnavitem--googleplus:hover {
-    background: #dd4b39;
-}*/
+    li {
+        display: inline-block;
+        color: $color-text-base;
+        line-height: 1em;
+        vertical-align: middle;
+        margin: 2px 0;
+
+        &:nth-child(odd) {
+            color: $color-main;
+        }
+
+        &.beginner { font-size: 100%; }
+        &.basic { font-size: 150%; }
+        &.intermediate { font-size: 200%; }
+        &.advanced { font-size: 250%;}
+    }
+}
