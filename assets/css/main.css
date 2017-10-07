@@ -357,7 +357,6 @@ div[class*="container"] {
 .skillcloud-container .wrapper {
   padding-top: 5em;
   padding-bottom: 5em;
-  border-bottom: 2px #e70388 solid;
 }
 
 @media only screen and (min-width: 601px) {
@@ -419,6 +418,90 @@ div[class*="container"] {
 /* # =================================================================
    # Portfolio
    # ================================================================= */
+.portfolio-container .wrapper {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+@media only screen and (min-width: 601px) {
+  .portfolio-container .wrapper {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 2.4em;
+  text-transform: uppercase;
+  margin-bottom: 2.5em;
+}
+
+.portfolio-title:before {
+  border-bottom: 0.125em #e70388 solid;
+  display: block;
+  width: 10%;
+  content: " ";
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 601px) {
+  .portfolio-title:before {
+    width: 10%;
+  }
+}
+
+.featured-work {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.featured-work strong {
+  color: #e70388;
+  font-family: "Oswald", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.featured-work h2 {
+  color: #23c0ec;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 120%;
+  margin: 12px 0;
+}
+
+.featured-work .tags {
+  color: #23c0ec;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: lowercase;
+  line-height: 1em;
+  letter-spacing: 1px;
+}
+
+.featured-work img {
+  margin: 2em 0;
+}
+
+.featured-work .project-link {
+  color: #dfe2d7;
+  background-color: #7a2a8d;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 20px 50px;
+}
+
 /* # =================================================================
    # Helpers
    # ================================================================= */

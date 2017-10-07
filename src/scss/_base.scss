@@ -186,7 +186,7 @@ div[class*="container"] {
     .wrapper {
         padding-top: 5em;
         padding-bottom: 5em;
-        border-bottom: 2px $color-main solid;
+        // border-bottom: 2px $color-main solid;
 
         @include respond-to(medium) {
             padding-top: 8em;
@@ -239,9 +239,78 @@ div[class*="container"] {
    # ================================================================= */
 
 .portfolio-container {
-    .wrapper {}
+    .wrapper {
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        @include respond-to(medium) {
+            padding-top: 4em;
+            padding-bottom: 4em;
+        }
+    }
 }
 
-.portfolio-title {}
+.portfolio-title {
+    font-weight: 700;
+    font-size: em(16px, 10);
+    line-height: 2.4em;
+    text-transform: uppercase;
+    margin-bottom: em(40px, 16);
 
-.featured-work {}
+    &:before {
+        border-bottom: em(2px, 16) $color-main solid;
+        display: block;
+        width: 10%;
+        content: " ";
+        margin: 0 auto;
+        @include respond-to(medium) {
+            width: 10%;
+        }
+    }
+}
+
+.featured-work {
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    strong {
+        color: $color-main;
+        font-family: $oswald-font-stack;
+        font-size: 3em;
+        font-weight: 400;
+        line-height: 1;
+    }
+    h2 {
+        color: $color-text-base;
+        font-family: $roboto-font-stack;
+        font-size: 3em;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 120%;
+        margin: 12px 0;
+    }
+    .tags {
+        color: $color-text-base;
+        font-family: $roboto-font-stack;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: lowercase;
+        line-height: 1em;
+        letter-spacing: 1px;
+    }
+    img {
+        margin: 2em 0;
+    }
+    .project-link {
+        color: $color-text-light;
+        background-color: $color-buttons;
+        font-family: $roboto-font-stack;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+        border-radius: 5px;
+        margin-top: 50px;
+        padding: 20px 50px;
+    }
+}
