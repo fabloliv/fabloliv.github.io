@@ -253,14 +253,13 @@ div[class*="container"] {
 .portfolio-title {
     font-weight: 700;
     font-size: em(16px, 10);
-    line-height: 2.4em;
+    line-height: 2.5em;
     text-transform: uppercase;
-    margin-bottom: em(40px, 16);
 
     &:before {
-        border-bottom: em(2px, 16) $color-main solid;
+        border-bottom: em(4px, 16) $color-main solid;
         display: block;
-        width: 10%;
+        width: 30%;
         content: " ";
         margin: 0 auto;
         @include respond-to(medium) {
@@ -269,48 +268,64 @@ div[class*="container"] {
     }
 }
 
-.featured-work {
-    padding-top: 4em;
+.work {
+    padding-top: 9em;
     padding-bottom: 4em;
 
-    strong {
+    &-year {
         color: $color-main;
         font-family: $oswald-font-stack;
         font-size: 3em;
         font-weight: 400;
         line-height: 1;
     }
-    h2 {
+    &-title {
         color: $color-text-base;
         font-family: $roboto-font-stack;
-        font-size: 3em;
+        font-size: 3.2em;
         font-weight: 700;
-        text-transform: uppercase;
         line-height: 120%;
-        margin: 12px 0;
+        margin-top: em(12px, 32);
     }
-    .tags {
-        color: $color-text-base;
-        font-family: $roboto-font-stack;
-        font-size: 18px;
-        font-weight: 700;
+    &-tags {
+        @extend .work-title;
+        font-size: 2em;
         text-transform: lowercase;
-        line-height: 1em;
-        letter-spacing: 1px;
+        display: block;
+        margin-bottom: em(30px, 20);
+        margin-top: em(12px, 20);
     }
-    img {
-        margin: 2em 0;
+    &-description {
+        font-size: 1.8em;
+        line-height: 150%;
+        a {
+            color: $color-text-base;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
-    .project-link {
+    &-img {
+        margin-top: 4em;
+        margin-bottom: 2em;
+    }
+    &-link {
+        @extend .work-title;
         color: $color-text-light;
         background-color: $color-buttons;
-        font-family: $roboto-font-stack;
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-size: 2.4em;
         display: inline-block;
-        border-radius: 5px;
-        margin-top: 50px;
-        padding: 20px 50px;
+        margin: em(30px, 24) 0 0;
+        padding: em(15px, 24) em(35px, 24);
+        text-transform: uppercase;
+        border-radius: em(5px, 24);
+        letter-spacing: em(1px, 24);
+        line-height: 1em;
+
+        transition: background-color 200ms;
+
+        &:hover {
+            background-color: lighten($color-buttons, 20%);
+        }
     }
 }

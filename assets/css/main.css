@@ -433,15 +433,14 @@ div[class*="container"] {
 .portfolio-title {
   font-weight: 700;
   font-size: 1.6em;
-  line-height: 2.4em;
+  line-height: 2.5em;
   text-transform: uppercase;
-  margin-bottom: 2.5em;
 }
 
 .portfolio-title:before {
-  border-bottom: 0.125em #e70388 solid;
+  border-bottom: 0.25em #e70388 solid;
   display: block;
-  width: 10%;
+  width: 30%;
   content: " ";
   margin: 0 auto;
 }
@@ -452,12 +451,12 @@ div[class*="container"] {
   }
 }
 
-.featured-work {
-  padding-top: 4em;
+.work {
+  padding-top: 9em;
   padding-bottom: 4em;
 }
 
-.featured-work strong {
+.work-year {
   color: #e70388;
   font-family: "Oswald", sans-serif;
   font-size: 3em;
@@ -465,41 +464,57 @@ div[class*="container"] {
   line-height: 1;
 }
 
-.featured-work h2 {
+.work-title, .work-tags, .work-link {
   color: #23c0ec;
   font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 3em;
+  font-size: 3.2em;
   font-weight: 700;
-  text-transform: uppercase;
   line-height: 120%;
-  margin: 12px 0;
+  margin-top: 0.375em;
 }
 
-.featured-work .tags {
-  color: #23c0ec;
-  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
+.work-tags {
+  font-size: 2em;
   text-transform: lowercase;
-  line-height: 1em;
-  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1.5em;
+  margin-top: 0.6em;
 }
 
-.featured-work img {
-  margin: 2em 0;
+.work-description {
+  font-size: 1.8em;
+  line-height: 150%;
 }
 
-.featured-work .project-link {
+.work-description a {
+  color: #23c0ec;
+}
+
+.work-description a:hover {
+  text-decoration: underline;
+}
+
+.work-img {
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+
+.work-link {
   color: #dfe2d7;
   background-color: #7a2a8d;
-  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 2.4em;
   display: inline-block;
-  border-radius: 5px;
-  margin-top: 50px;
-  padding: 20px 50px;
+  margin: 1.25em 0 0;
+  padding: 0.625em 1.45833em;
+  text-transform: uppercase;
+  border-radius: 0.20833em;
+  letter-spacing: 0.04167em;
+  line-height: 1em;
+  transition: background-color 200ms;
+}
+
+.work-link:hover {
+  background-color: #b452cb;
 }
 
 /* # =================================================================
