@@ -1,8 +1,5 @@
 // Descriptive color variables
 $violet: rgb(12, 6, 30); // Violet - body background
-//$violet: hsl(255, 66.7%, 7.1%); // Violet - body background
-//$violet: hsl(268.9, 73%, 14.5%);
-//$violet: RGB(26, 0, 51);
 $eminence: rgb(122, 42, 141); // Eminence - buttons background
 $rose: rgb(231, 3, 136); // Rose - for titles and text
 $moonMist: rgb(223, 226, 215); // Moon Mist - lighter color for text
@@ -41,22 +38,19 @@ body {
     font-family: $roboto-font-stack;
     color: $color-text-light;
     background-color: $color-body;
-    // Background error: In Chrome 61, CSS-created shapes are slightly lighter than the background color set for the "body" tag.
+    // HACK: Background error: In Chrome 61, CSS-created shapes are slightly lighter than the background color set for the "body" tag.
     -webkit-transform: translate3d(0, 0, 0);
 }
 
 div[class*="container"] {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    @include respond-to(medium) { width: 90% ;}
 }
 
 .wrapper {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    // width: 70%;
-
     @include respond-to(medium) { width: 70% ;}
 }
 
@@ -66,16 +60,14 @@ div[class*="container"] {
 
 .intro-container {
     .wrapper {
-        // padding: 8em 7em 8em;
         padding-top: 5em;
         padding-bottom: 4em;
-        border-bottom: 2px $color-main solid;
 
         @include respond-to(medium) {
             padding-top: 8em;
             padding-bottom: 8em;
-            padding-left: 7em;
-            padding-right: 7em;
+            // padding-left: 6em;
+            // padding-right: 6em;
         }
 
     }
@@ -85,9 +77,8 @@ div[class*="container"] {
         color: $color-main;
         text-transform: uppercase;
         line-height: 1em;
-        font-size: em(34, 10);
-        letter-spacing: em(1, 44);
-        @include respond-to(medium) { font-size: em(44, 10); }
+        font-size: em(32, 10);
+        @include respond-to(medium) { font-size: em(40, 10); }
     }
 
     h2 {
@@ -95,23 +86,28 @@ div[class*="container"] {
         color: $color-text-base;
         font-weight: 700;
         font-size: em(18px, 10);
-        line-height: 140%;
+        line-height: 1em;
+        text-transform: uppercase;
         padding: em(10px, 18) 0 em(20px, 18);
 
         @include respond-to(medium) {
             font-size: em(22px, 10);
-            padding: em(10px, 22) 0 em(40px, 22);
+            padding: em(10px, 22) 0 em(30px, 22);
         }
-
     }
 
     p {
         font-size: em(16px, 10);
         line-height: 140%;
+        margin-bottom: em(10, 16);
+
+        -ms-word-break: keep-all;
+        word-break: keep-all;
 
         @include respond-to(medium) {
             font-size: 2em;
-            line-height: 150%;
+            width: 70%;
+            margin: 0 auto em(15, 20);
         }
     }
 }
@@ -184,17 +180,16 @@ div[class*="container"] {
 
 .skillcloud-container {
     .wrapper {
-        padding-top: 5em;
-        padding-bottom: 5em;
-        // border-bottom: 2px $color-main solid;
+        padding-top: 6em;
+        padding-bottom: 8em;
+
+        border-top: 2px $color-main solid;
 
         @include respond-to(medium) {
             padding-top: 8em;
-            padding-bottom: 8em;
             padding-left: 8em;
             padding-right: 8em;
         }
-        .row {}
     }
 }
 
@@ -209,11 +204,9 @@ div[class*="container"] {
     }
     text-transform: uppercase;
     font-size: em(18, 10);
-    letter-spacing: em(1px, 18);
 
     @include respond-to(medium) {
         font-size: em(20, 10);
-        letter-spacing: em(1px, 20);
     }
 
     li {
@@ -221,7 +214,7 @@ div[class*="container"] {
         color: $color-text-base;
         line-height: 1em;
         vertical-align: middle;
-        margin: 2px 0;
+        margin: 2px;
 
         &:nth-child(odd) {
             color: $color-main;
@@ -240,36 +233,28 @@ div[class*="container"] {
 
 .portfolio-container {
     .wrapper {
-        padding-top: 2em;
-        padding-bottom: 2em;
-
-        @include respond-to(medium) {
-            padding-top: 4em;
-            padding-bottom: 4em;
-        }
+        padding-bottom: 4em;
     }
 }
 
 .portfolio-title {
     font-weight: 700;
-    font-size: em(16px, 10);
-    line-height: 2.5em;
+    font-size: em(14px, 10);
+    line-height: 1em;
     text-transform: uppercase;
 
-    &:before {
-        border-bottom: em(4px, 16) $color-main solid;
+    &::before {
         display: block;
-        width: 30%;
+        width: em(50, 14);
         content: " ";
-        margin: 0 auto;
-        @include respond-to(medium) {
-            width: 10%;
-        }
+        margin: 0 auto em(15px, 14);
+        height: em(2px, 14);
+        background-color: $color-main;
     }
 }
 
 .work {
-    padding-top: 9em;
+    padding-top: 6em;
     padding-bottom: 4em;
 
     &-year {
@@ -285,19 +270,24 @@ div[class*="container"] {
         font-size: 3.2em;
         font-weight: 700;
         line-height: 120%;
-        margin-top: em(12px, 32);
+        margin-top: em(7px, 32);
     }
     &-tags {
         @extend .work-title;
-        font-size: 2em;
+        font-size: 1.8em;
         text-transform: lowercase;
         display: block;
-        margin-bottom: em(30px, 20);
-        margin-top: em(12px, 20);
+        margin-bottom: em(30px, 18);
+        margin-top: em(10px, 18);
     }
     &-description {
         font-size: 1.8em;
-        line-height: 150%;
+        line-height: 140%;
+
+        @include respond-to(medium) {
+            width: 70%;
+            margin: 0 auto;
+        }
         a {
             color: $color-text-base;
             &:hover {
@@ -313,13 +303,12 @@ div[class*="container"] {
         @extend .work-title;
         color: $color-text-light;
         background-color: $color-buttons;
-        font-size: 2.4em;
+        font-size: 2em;
         display: inline-block;
-        margin: em(30px, 24) 0 0;
-        padding: em(15px, 24) em(35px, 24);
+        margin: em(30px, 20) 0 0;
+        padding: em(15px, 20) em(35px, 20);
         text-transform: uppercase;
-        border-radius: em(5px, 24);
-        letter-spacing: em(1px, 24);
+        letter-spacing: em(1px, 20);
         line-height: 1em;
 
         transition: background-color 200ms;
@@ -329,3 +318,43 @@ div[class*="container"] {
         }
     }
 }
+
+.footer-pattern {
+    height: 50em;
+    background:
+    repeating-radial-gradient(
+        circle,
+        transparent,
+        transparent 3.5em,
+        tomato 3.5em,
+        tomato 4.5em
+    ),
+    repeating-radial-gradient(
+        circle,
+        transparent,
+        transparent 3.5em,
+        dodgerblue 3.5em,
+        dodgerblue 4.5em
+    ),
+    repeating-radial-gradient(
+        circle,
+        transparent,
+        transparent 2.5em,
+        gold 2.5em,
+        gold 2.75em
+    ), floralwhite;
+
+    background-blend-mode: multiply;
+    background-size: 10em 10em;
+    background-position:
+        0 0,
+        5em 5em,
+        10em 5em;
+
+    p {
+        font-size: 1.2em;
+        line-height: 2em;
+        background-color: $color-body;
+    }
+}
+

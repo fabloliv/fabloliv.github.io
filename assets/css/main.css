@@ -210,14 +210,8 @@ body {
 }
 
 div[class*="container"] {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-}
-
-@media only screen and (min-width: 601px) {
-  div[class*="container"] {
-    width: 90%;
-  }
 }
 
 .wrapper {
@@ -238,15 +232,12 @@ div[class*="container"] {
 .intro-container .wrapper {
   padding-top: 5em;
   padding-bottom: 4em;
-  border-bottom: 2px #e70388 solid;
 }
 
 @media only screen and (min-width: 601px) {
   .intro-container .wrapper {
     padding-top: 8em;
     padding-bottom: 8em;
-    padding-left: 7em;
-    padding-right: 7em;
   }
 }
 
@@ -255,13 +246,12 @@ div[class*="container"] {
   color: #e70388;
   text-transform: uppercase;
   line-height: 1em;
-  font-size: 3.4em;
-  letter-spacing: 0.02273em;
+  font-size: 3.2em;
 }
 
 @media only screen and (min-width: 601px) {
   .intro-container h1 {
-    font-size: 4.4em;
+    font-size: 4em;
   }
 }
 
@@ -270,26 +260,31 @@ div[class*="container"] {
   color: #23c0ec;
   font-weight: 700;
   font-size: 1.8em;
-  line-height: 140%;
+  line-height: 1em;
+  text-transform: uppercase;
   padding: 0.55556em 0 1.11111em;
 }
 
 @media only screen and (min-width: 601px) {
   .intro-container h2 {
     font-size: 2.2em;
-    padding: 0.45455em 0 1.81818em;
+    padding: 0.45455em 0 1.36364em;
   }
 }
 
 .intro-container p {
   font-size: 1.6em;
   line-height: 140%;
+  margin-bottom: 0.625em;
+  -ms-word-break: keep-all;
+  word-break: keep-all;
 }
 
 @media only screen and (min-width: 601px) {
   .intro-container p {
     font-size: 2em;
-    line-height: 150%;
+    width: 70%;
+    margin: 0 auto 0.75em;
   }
 }
 
@@ -355,14 +350,14 @@ div[class*="container"] {
    # Skill Cloud
    # ================================================================= */
 .skillcloud-container .wrapper {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 6em;
+  padding-bottom: 8em;
+  border-top: 2px #e70388 solid;
 }
 
 @media only screen and (min-width: 601px) {
   .skillcloud-container .wrapper {
     padding-top: 8em;
-    padding-bottom: 8em;
     padding-left: 8em;
     padding-right: 8em;
   }
@@ -377,13 +372,11 @@ div[class*="container"] {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1.8em;
-  letter-spacing: 0.05556em;
 }
 
 @media only screen and (min-width: 601px) {
   .skill-list {
     font-size: 2em;
-    letter-spacing: 0.05em;
   }
 }
 
@@ -392,7 +385,7 @@ div[class*="container"] {
   color: #23c0ec;
   line-height: 1em;
   vertical-align: middle;
-  margin: 2px 0;
+  margin: 2px;
 }
 
 .skill-list li:nth-child(odd) {
@@ -419,40 +412,27 @@ div[class*="container"] {
    # Portfolio
    # ================================================================= */
 .portfolio-container .wrapper {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-@media only screen and (min-width: 601px) {
-  .portfolio-container .wrapper {
-    padding-top: 4em;
-    padding-bottom: 4em;
-  }
+  padding-bottom: 4em;
 }
 
 .portfolio-title {
   font-weight: 700;
-  font-size: 1.6em;
-  line-height: 2.5em;
+  font-size: 1.4em;
+  line-height: 1em;
   text-transform: uppercase;
 }
 
-.portfolio-title:before {
-  border-bottom: 0.25em #e70388 solid;
+.portfolio-title::before {
   display: block;
-  width: 30%;
+  width: 3.57143em;
   content: " ";
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 601px) {
-  .portfolio-title:before {
-    width: 10%;
-  }
+  margin: 0 auto 1.07143em;
+  height: 0.14286em;
+  background-color: #e70388;
 }
 
 .work {
-  padding-top: 9em;
+  padding-top: 6em;
   padding-bottom: 4em;
 }
 
@@ -470,20 +450,27 @@ div[class*="container"] {
   font-size: 3.2em;
   font-weight: 700;
   line-height: 120%;
-  margin-top: 0.375em;
+  margin-top: 0.21875em;
 }
 
 .work-tags {
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: lowercase;
   display: block;
-  margin-bottom: 1.5em;
-  margin-top: 0.6em;
+  margin-bottom: 1.66667em;
+  margin-top: 0.55556em;
 }
 
 .work-description {
   font-size: 1.8em;
-  line-height: 150%;
+  line-height: 140%;
+}
+
+@media only screen and (min-width: 601px) {
+  .work-description {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 .work-description a {
@@ -502,19 +489,32 @@ div[class*="container"] {
 .work-link {
   color: #dfe2d7;
   background-color: #7a2a8d;
-  font-size: 2.4em;
+  font-size: 2em;
   display: inline-block;
-  margin: 1.25em 0 0;
-  padding: 0.625em 1.45833em;
+  margin: 1.5em 0 0;
+  padding: 0.75em 1.75em;
   text-transform: uppercase;
-  border-radius: 0.20833em;
-  letter-spacing: 0.04167em;
+  letter-spacing: 0.05em;
   line-height: 1em;
   transition: background-color 200ms;
 }
 
 .work-link:hover {
   background-color: #b452cb;
+}
+
+.footer-pattern {
+  height: 50em;
+  background: repeating-radial-gradient(circle, transparent, transparent 3.5em, tomato 3.5em, tomato 4.5em), repeating-radial-gradient(circle, transparent, transparent 3.5em, dodgerblue 3.5em, dodgerblue 4.5em), repeating-radial-gradient(circle, transparent, transparent 2.5em, gold 2.5em, gold 2.75em), floralwhite;
+  background-blend-mode: multiply;
+  background-size: 10em 10em;
+  background-position: 0 0, 5em 5em, 10em 5em;
+}
+
+.footer-pattern p {
+  font-size: 1.2em;
+  line-height: 2em;
+  background-color: #0c061e;
 }
 
 /* # =================================================================
