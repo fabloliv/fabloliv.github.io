@@ -77,36 +77,33 @@ div[class*="container"] {
         color: $color-main;
         text-transform: uppercase;
         line-height: 1em;
-        font-size: em(32, 10);
-        @include respond-to(medium) { font-size: em(40, 10); }
+        font-weight: 400;
+        font-size: em(34, 10);
     }
 
     h2 {
         font-family: $roboto-font-stack;
         color: $color-text-base;
         font-weight: 700;
-        font-size: em(18px, 10);
+        font-size: em(22, 10);
         line-height: 1em;
-        text-transform: uppercase;
-        padding: em(10px, 18) 0 em(20px, 18);
+        padding: em(5px, 22) 0 em(30px, 22);
 
         @include respond-to(medium) {
-            font-size: em(22px, 10);
-            padding: em(10px, 22) 0 em(30px, 22);
+            // font-size: 2em;
+            // padding: em(10px, 20) 0 em(30px, 20);
+            // letter-spacing: em(1px, 20);
         }
     }
 
     p {
         font-size: em(16px, 10);
-        line-height: 140%;
-        margin-bottom: em(10, 16);
-
-        -ms-word-break: keep-all;
-        word-break: keep-all;
+        line-height: 150%;
+        margin-bottom: em(12, 16);
 
         @include respond-to(medium) {
             font-size: 2em;
-            width: 70%;
+            width: 74%;
             margin: 0 auto em(15, 20);
         }
     }
@@ -180,15 +177,13 @@ div[class*="container"] {
 
 .skillcloud-container {
     .wrapper {
-        padding-top: 6em;
-        padding-bottom: 8em;
+        padding: 6em 0;
 
         border-top: 2px $color-main solid;
+        border-bottom: 2px $color-main solid;
 
         @include respond-to(medium) {
-            padding-top: 8em;
-            padding-left: 8em;
-            padding-right: 8em;
+            padding: 8em 9em;
         }
     }
 }
@@ -200,7 +195,7 @@ div[class*="container"] {
 .skill-list {
     font: {
         family: $oswald-font-stack;
-        weight: 400;
+        weight: 600;
     }
     text-transform: uppercase;
     font-size: em(18, 10);
@@ -238,23 +233,17 @@ div[class*="container"] {
 }
 
 .portfolio-title {
-    font-weight: 700;
-    font-size: em(14px, 10);
+    font-family: $oswald-font-stack;
+    font-weight: 400;
+    font-size: 2.2em;
     line-height: 1em;
     text-transform: uppercase;
-
-    &::before {
-        display: block;
-        width: em(50, 14);
-        content: " ";
-        margin: 0 auto em(15px, 14);
-        height: em(2px, 14);
-        background-color: $color-main;
-    }
+    letter-spacing: em(1px, 22);
+    padding: em(100px, 22) 0 em(50px, 22);
 }
 
 .work {
-    padding-top: 6em;
+    padding-top: 5em;
     padding-bottom: 4em;
 
     &-year {
@@ -294,6 +283,9 @@ div[class*="container"] {
                 text-decoration: underline;
             }
         }
+        em {
+            font-style: italic;
+        }
     }
     &-img {
         margin-top: 4em;
@@ -319,42 +311,16 @@ div[class*="container"] {
     }
 }
 
-.footer-pattern {
-    height: 50em;
-    background:
-    repeating-radial-gradient(
-        circle,
-        transparent,
-        transparent 3.5em,
-        tomato 3.5em,
-        tomato 4.5em
-    ),
-    repeating-radial-gradient(
-        circle,
-        transparent,
-        transparent 3.5em,
-        dodgerblue 3.5em,
-        dodgerblue 4.5em
-    ),
-    repeating-radial-gradient(
-        circle,
-        transparent,
-        transparent 2.5em,
-        gold 2.5em,
-        gold 2.75em
-    ), floralwhite;
-
-    background-blend-mode: multiply;
-    background-size: 10em 10em;
-    background-position:
-        0 0,
-        5em 5em,
-        10em 5em;
-
-    p {
-        font-size: 1.2em;
-        line-height: 2em;
-        background-color: $color-body;
-    }
+.copyright {
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: em(60, 11);
 }
 
+.footer-pattern {
+    height: em(250px, 10);
+    background:
+        linear-gradient(-45deg, $color-text-base 0%, $color-text-base 50%, $color-body 50%);
+    background-color: $color-body;
+    background-size: 50px 50px;
+}

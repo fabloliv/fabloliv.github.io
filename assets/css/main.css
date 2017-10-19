@@ -246,44 +246,29 @@ div[class*="container"] {
   color: #e70388;
   text-transform: uppercase;
   line-height: 1em;
-  font-size: 3.2em;
-}
-
-@media only screen and (min-width: 601px) {
-  .intro-container h1 {
-    font-size: 4em;
-  }
+  font-weight: 400;
+  font-size: 3.4em;
 }
 
 .intro-container h2 {
   font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #23c0ec;
   font-weight: 700;
-  font-size: 1.8em;
+  font-size: 2.2em;
   line-height: 1em;
-  text-transform: uppercase;
-  padding: 0.55556em 0 1.11111em;
-}
-
-@media only screen and (min-width: 601px) {
-  .intro-container h2 {
-    font-size: 2.2em;
-    padding: 0.45455em 0 1.36364em;
-  }
+  padding: 0.22727em 0 1.36364em;
 }
 
 .intro-container p {
   font-size: 1.6em;
-  line-height: 140%;
-  margin-bottom: 0.625em;
-  -ms-word-break: keep-all;
-  word-break: keep-all;
+  line-height: 150%;
+  margin-bottom: 0.75em;
 }
 
 @media only screen and (min-width: 601px) {
   .intro-container p {
     font-size: 2em;
-    width: 70%;
+    width: 74%;
     margin: 0 auto 0.75em;
   }
 }
@@ -350,16 +335,14 @@ div[class*="container"] {
    # Skill Cloud
    # ================================================================= */
 .skillcloud-container .wrapper {
-  padding-top: 6em;
-  padding-bottom: 8em;
+  padding: 6em 0;
   border-top: 2px #e70388 solid;
+  border-bottom: 2px #e70388 solid;
 }
 
 @media only screen and (min-width: 601px) {
   .skillcloud-container .wrapper {
-    padding-top: 8em;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding: 8em 9em;
   }
 }
 
@@ -369,7 +352,7 @@ div[class*="container"] {
 
 .skill-list {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 1.8em;
 }
@@ -416,23 +399,17 @@ div[class*="container"] {
 }
 
 .portfolio-title {
-  font-weight: 700;
-  font-size: 1.4em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.2em;
   line-height: 1em;
   text-transform: uppercase;
-}
-
-.portfolio-title::before {
-  display: block;
-  width: 3.57143em;
-  content: " ";
-  margin: 0 auto 1.07143em;
-  height: 0.14286em;
-  background-color: #e70388;
+  letter-spacing: 0.04545em;
+  padding: 4.54545em 0 2.27273em;
 }
 
 .work {
-  padding-top: 6em;
+  padding-top: 5em;
   padding-bottom: 4em;
 }
 
@@ -481,6 +458,10 @@ div[class*="container"] {
   text-decoration: underline;
 }
 
+.work-description em {
+  font-style: italic;
+}
+
 .work-img {
   margin-top: 4em;
   margin-bottom: 2em;
@@ -503,18 +484,17 @@ div[class*="container"] {
   background-color: #b452cb;
 }
 
-.footer-pattern {
-  height: 50em;
-  background: repeating-radial-gradient(circle, transparent, transparent 3.5em, tomato 3.5em, tomato 4.5em), repeating-radial-gradient(circle, transparent, transparent 3.5em, dodgerblue 3.5em, dodgerblue 4.5em), repeating-radial-gradient(circle, transparent, transparent 2.5em, gold 2.5em, gold 2.75em), floralwhite;
-  background-blend-mode: multiply;
-  background-size: 10em 10em;
-  background-position: 0 0, 5em 5em, 10em 5em;
+.copyright {
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 5.45455em;
 }
 
-.footer-pattern p {
-  font-size: 1.2em;
-  line-height: 2em;
+.footer-pattern {
+  height: 25em;
+  background: linear-gradient(-45deg, #23c0ec 0%, #23c0ec 50%, #0c061e 50%);
   background-color: #0c061e;
+  background-size: 50px 50px;
 }
 
 /* # =================================================================
