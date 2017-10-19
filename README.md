@@ -1,8 +1,15 @@
 # fabriciolo.com
 
-Meu site pessoal e links pra contato.
+Meu site pessoal.
 
 ## Changelog:
+
+### v5.0.0 (19/10/2017)
+
+* Novo tema e código reformulados!
+* Novo texto de apresentação!
+* Nova "skills cloud"
+* Adicionado portfolio com principais trabalhos recentes.
 
 ### v4.1.2 (21/07/2017)
 
