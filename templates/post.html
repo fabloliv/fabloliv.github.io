@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Post | Fabrício Oliveira - Desenvolvedor Front-End{% endblock %}
+{% block description %}Sou Desenvolvedor Front-end em São Pedro da Aldeia-RJ. Meu objetivo é construir sites para pequenas empresas, com foco em performance, usabilidade e SEO.{% endblock %}
+
+{% block body %}
+  <h1>{{ post.title }}</h1>
+  <div class="content">
+    {{ post.content|safe }}
+  </div>
+{% endblock %}

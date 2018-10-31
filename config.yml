@@ -1,0 +1,7 @@
+project-name: fabriciolo.com
+base-path: /
+assets:
+  source: assets
+context:
+  static:
+    site-title: Fabrício Oliveira
