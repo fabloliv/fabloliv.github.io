@@ -43,11 +43,12 @@
         ga('send', 'pageview');
       </script> -->
     {%- endblock %}
+    {% set active_page = active_page|default('home') -%}
 </head>
 
-<body itemscope itemtype="http://schema.org/Person">
+<body class="{{ active_page }}" itemscope itemtype="http://schema.org/Person">
     {% include 'nav.html' %}
-    
+
     {% block body %}{% endblock %}
     <p class="copyright">&copy 2007-2018 Handcrafted by Fabrício Oliveira.</p>
     <div class="footer-pattern"></div>

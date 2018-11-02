@@ -55,33 +55,6 @@ div[class*="container"] {
 }
 
 /* # =================================================================
-   # Menu
-   # ================================================================= */
-
-.top-nav {
-    padding: 30px 0 10px;
-}
-.top-nav li {
-    display: inline-block;
-    margin: 0 em(5px, 10px);
-}
-.top-nav a {
-    display: block;
-    color: $color-text-light;
-    border-bottom: em(4px, 16px) solid $color-buttons;
-    font-size: 1.6em;
-    font-weight: 700;
-    padding: em(10, 16) em(5, 16);
-
-    -webkit-transition: background-color 300ms;
-    transition: background-color 300ms;
-}
-.top-nav a:hover {
-    background-color: lighten($color-buttons, 20%);
-    // border-bottom-color: lighten($color-buttons, 20%);
-}
-
-/* # =================================================================
    # Intro
    # ================================================================= */
 

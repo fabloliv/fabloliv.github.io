@@ -1,14 +1,45 @@
 {% extends "base.html" %}
-
+{% set active_page = "blog" %}
 {% block title %}Blog | Fabrício Oliveira - Desenvolvedor Front-End{% endblock %}
 {% block description %}Sou Desenvolvedor Front-end em São Pedro da Aldeia-RJ. Meu objetivo é construir sites para pequenas empresas, com foco em performance, usabilidade e SEO.{% endblock %}
 
 {% block body %}
-  <h1>Welcome to My Blog!</h1>
-  <p>These are my latest posts</p>
-  <ul>
-    {% for post in posts %}
-      <li><a href="{% url "post", post %}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="intro-container">
+    <div class="wrapper cf">
+
+        <h1 rel="author" itemprop="name">Fabrício Oliveira</h1>
+        <h2><span itemprop="jobTitle">Desenvolvedor Front-end</span></h2>
+
+        <ul class="social-links group">
+            <li><a rel="me" itemprop="url" href="https://github.com/fabloliv" class="icon icon-github" title="GitHub"><span class="screen-reader-text">GitHub</span></a></li>
+            <li><a rel="me" itemprop="url" href="http://br.linkedin.com/in/fabriciolo/" class="icon icon-linkedin2" title="LinkedIn"><span class="screen-reader-text">LinkedIn</span></a></li>
+            <li><a rel="me" itemprop="url" href="https://www.facebook.com/fabloliv/" class="icon icon-facebook" title="Facebook"><span class="screen-reader-text">Facebook</span></a></li>
+            <li><a rel="me" itemprop="url" href="http://twitter.com/fabloliv" class="icon icon-twitter" title="Twitter"><span class="screen-reader-text">Twitter</span></a></li>
+            <li><a rel="author" itemprop="url" href="https://plus.google.com/104978548561595646334" class="icon icon-google-plus" title="Google Plus"><span class="screen-reader-text">Google Plus</span></a></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="skillcloud-container">
+    <div class="wrapper cf">
+
+        <div class="row">
+
+
+        </div>
+    </div>
+  </div>
+
+  <div class="portfolio-container">
+    <div class="wrapper cf">
+
+        <h3 class="portfolio-title">latest posts</h3>
+
+        <ul>
+          {% for post in posts %}
+            <li><a href="{% url "post", post %}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
 {% endblock %}

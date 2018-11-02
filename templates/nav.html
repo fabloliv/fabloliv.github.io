@@ -1,6 +1,10 @@
 <nav id="site-navigation" class="main-nav" role="navigation" aria-label="Top Menu">
     <ul id="navigation" class="top-nav">
-        <li><a class="" href="{% url "home" %}">home</a></li>
-        <li><a class="" href="{% url "blog" %}">blog</a></li>
+        <li {% if active_page == "home" %} class="active"{% endif %}>
+            <a href="{% url "home" %}">home</a>
+        </li>
+        <li {% if active_page == "blog" %} class="active"{% endif %}>
+            <a href="{% url "blog" %}">blog</a>
+        </li>
     </ul>
 </nav>
