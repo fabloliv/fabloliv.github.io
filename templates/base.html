@@ -46,14 +46,10 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/Person">
-
-    <div class="content-container" role="main">
-        {% include 'nav.html' %}
-        
-        {% block body %}{% endblock %}
-    </div>
-
-    <p class="copyright">&copy 2007-2017 Handcrafted by Fabrício Oliveira.</p>
+    {% include 'nav.html' %}
+    
+    {% block body %}{% endblock %}
+    <p class="copyright">&copy 2007-2018 Handcrafted by Fabrício Oliveira.</p>
     <div class="footer-pattern"></div>
 </body>
 </html>
