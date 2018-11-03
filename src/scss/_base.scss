@@ -72,7 +72,7 @@ div[class*="container"] {
 
     }
 
-    h1 {
+    .name {
         font-family: $oswald-font-stack;
         color: $color-main;
         text-transform: uppercase;
@@ -81,7 +81,7 @@ div[class*="container"] {
         font-size: em(34, 10);
     }
 
-    h2 {
+    .job-title {
         font-family: $roboto-font-stack;
         color: $color-text-base;
         font-weight: 700;
@@ -114,6 +114,9 @@ div[class*="container"] {
 
     @include respond-to(medium) {
         padding: em(50, 10) 0 0 0;
+        .blog & {
+            padding: 0;
+        }
     }
     li {
         margin: .6em;
@@ -184,6 +187,10 @@ div[class*="container"] {
 
         @include respond-to(medium) {
             padding: 8em 9em;
+
+            .blog & {
+                padding: 5em 0;
+            }
         }
     }
 }

@@ -11,12 +11,12 @@
 
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Fabrício Oliveira | Desenvolvedor Front-End">
+    <meta property="og:title" content="{% block ogtitle %}{% endblock %}">
     <meta property="og:url" content="http://fabriciolo.com">
     <meta property="og:image" content="http://fabriciolo.com/assets/img/thumbnail01.jpg">
     <meta property="og:image" content="http://fabriciolo.com/assets/img/thumbnail02.jpg">
     <meta property="og:image" content="http://fabriciolo.com/assets/img/thumbnail03.jpg">
-    <meta property="og:description" content="Meu objetivo é construir sites para pequenas empresas, com foco em performance, usabilidade e SEO.">
+    <meta property="og:description" content="{% block ogdescription %}{% endblock %}">
 
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary">
@@ -48,9 +48,10 @@
 
 <body class="{{ active_page }}" itemscope itemtype="http://schema.org/Person">
     {% include 'nav.html' %}
-
     {% block body %}{% endblock %}
-    <p class="copyright">&copy 2007-2018 Handcrafted by Fabrício Oliveira.</p>
+    <footer>
+        <p class="copyright">&copy 2007-2018 Handcrafted by Fabrício Oliveira.</p>
+    </footer>
     <div class="footer-pattern"></div>
 </body>
 </html>

@@ -1,14 +1,18 @@
 {% extends "base.html" %}
 {% set active_page = "blog" %}
+
 {% block title %}Blog | Fabrício Oliveira - Desenvolvedor Front-End{% endblock %}
-{% block description %}Sou Desenvolvedor Front-end em São Pedro da Aldeia-RJ. Meu objetivo é construir sites para pequenas empresas, com foco em performance, usabilidade e SEO.{% endblock %}
+{% block ogtitle %}Blog | Fabrício Oliveira - Desenvolvedor Front-End{% endblock %}
+
+{% block description %}Sou Desenvolvedor Front-end em São Pedro da Aldeia-RJ. Esse é meu blog onde espero compartilhar o que estou aprendendo!{% endblock %}
+{% block ogdescription %}Esse é meu blog onde espero compartilhar o que estou aprendendo!{% endblock %}
 
 {% block body %}
   <div class="intro-container">
     <div class="wrapper cf">
 
-        <h1 rel="author" itemprop="name">Fabrício Oliveira</h1>
-        <h2><span itemprop="jobTitle">Desenvolvedor Front-end</span></h2>
+        <h1 class="name" rel="author" itemprop="name">Fabrício Oliveira</h1>
+        <h2 class="job-title"><span itemprop="jobTitle">Desenvolvedor Front-end</span></h2>
 
         <ul class="social-links group">
             <li><a rel="me" itemprop="url" href="https://github.com/fabloliv" class="icon icon-github" title="GitHub"><span class="screen-reader-text">GitHub</span></a></li>
@@ -22,24 +26,27 @@
 
   <div class="skillcloud-container">
     <div class="wrapper cf">
-
-        <div class="row">
-
-
-        </div>
+        <h3 class="page-title">Blog</h3>
     </div>
   </div>
 
   <div class="portfolio-container">
     <div class="wrapper cf">
+        {% for post in posts %}
+        <article class="post">
 
-        <h3 class="portfolio-title">latest posts</h3>
+            <span class="post-published">
+              <time datetime="{{ post.published|date("%Y-%m-%d") }}">
+                  {{ post.published|date("%d/%m/%Y") }}
+              </time>
+            </span>
 
-        <ul>
-          {% for post in posts %}
-            <li><a href="{% url "post", post %}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
+            <h2 class="post-title">
+              <a href="{% url "post", post %}">{{ post.title }}</a>
+            </h2>
+
+        </article>
+        {% endfor %}
     </div>
   </div>
 {% endblock %}

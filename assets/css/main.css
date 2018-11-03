@@ -237,7 +237,7 @@ div[class*="container"] {
     padding-bottom: 8em;
   }
 }
-.intro-container h1 {
+.intro-container .name {
   font-family: "Oswald", sans-serif;
   color: #e70388;
   text-transform: uppercase;
@@ -245,7 +245,7 @@ div[class*="container"] {
   font-weight: 400;
   font-size: 3.4em;
 }
-.intro-container h2 {
+.intro-container .job-title {
   font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #23c0ec;
   font-weight: 700;
@@ -272,6 +272,9 @@ div[class*="container"] {
 @media only screen and (min-width: 601px) {
   .social-links {
     padding: 5em 0 0 0;
+  }
+  .blog .social-links {
+    padding: 0;
   }
 }
 .social-links li {
@@ -325,6 +328,9 @@ div[class*="container"] {
 @media only screen and (min-width: 601px) {
   .skillcloud-container .wrapper {
     padding: 8em 9em;
+  }
+  .blog .skillcloud-container .wrapper {
+    padding: 5em 0;
   }
 }
 
@@ -490,6 +496,90 @@ div[class*="container"] {
 
 .top-nav a:hover {
   background-color: #b452cb;
+}
+
+/* # =================================================================
+   # Blog page
+   # ================================================================= */
+.page-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.03125em;
+}
+
+.post {
+  width: 90%;
+  margin: 6em auto 0;
+  padding: 2em 0;
+}
+
+.post-published {
+  display: block;
+  font-size: 1.6em;
+  letter-spacing: 0.0625em;
+  line-height: 2em;
+  font-weight: 400;
+  color: #e70388;
+  font-family: "Oswald", sans-serif;
+}
+
+.post-title {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 120%;
+}
+.post-title a {
+  color: #23c0ec;
+  border-bottom: 3px #7a2a8d solid;
+  line-height: 140%;
+  -webkit-transition: color 300ms, background-color 300ms;
+  transition: color 300ms, background-color 300ms;
+}
+.post-title a:hover {
+  color: #dfe2d7;
+  background-color: #7a2a8d;
+}
+
+/* # =================================================================
+   # Article
+   # ================================================================= */
+.article {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.6em;
+}
+
+.article-title {
+  font-size: 1.875em;
+  font-weight: 700;
+  line-height: 120%;
+  padding: 60px 0 0 0;
+  color: #23c0ec;
+}
+
+.article-published {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.0625em;
+  line-height: 4em;
+  font-weight: 400;
+  color: #e70388;
+  font-family: "Oswald", sans-serif;
+}
+
+.article-content {
+  text-align: left;
+}
+.article-content p {
+  line-height: 160%;
+  margin: 0 0 24px 0;
+}
+.article-content a {
+  color: #23c0ec;
+  text-decoration: underline;
 }
 
 /* # =================================================================
