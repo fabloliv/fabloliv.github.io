@@ -52,9 +52,12 @@
    # ================================================================= */
 
 .article  {
-    width: 70%;
-    margin: 0 auto;
     font-size: 1.6em;
+
+    @include respond-to(tablet) {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 .article-title {
     font-size: em(30, 16);
@@ -77,12 +80,24 @@
 .article-content {
     text-align: left;
     p {
-
         line-height: 160%;
         margin: 0 0 24px 0;
     }
     a {
         color: $color-text-base;
-        text-decoration: underline;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    code {
+        font-size: 90%;
+        padding: 3px 5px !important;
+        background-color: #221c31;
+        line-height: 166%;
+        overflow: auto;
+        font-weight: 400;
+        color: #FFF;
+        border-radius: 3px;
     }
 }

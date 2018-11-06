@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% set active_page = "blog" %}
+{% block codelang %}{{ post.syntax }}{% endblock %}
 
 {% block title %}{{ post.title }} | Blog | Fabrício Oliveira{% endblock %}
 {% block ogtitle %}{{ post.title }} | Fabrício Oliveira{% endblock %}

@@ -66,8 +66,6 @@ div[class*="container"] {
         @include respond-to(medium) {
             padding-top: 8em;
             padding-bottom: 8em;
-            // padding-left: 6em;
-            // padding-right: 6em;
         }
 
     }
