@@ -1,0 +1,7 @@
+# data/Tag/_all.yml
+- pk: ubuntu
+  tag-name: Ubuntu
+- pk: js
+  tag-name: Javascript
+- pk: css
+  tag-name: CSS

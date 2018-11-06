@@ -1,5 +1,6 @@
 title: String
 slug: String
 summary: String
+syntax: String
 published: DateTime
 content: Content
