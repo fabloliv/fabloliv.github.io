@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" dir="ltr">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ubuntu 16.04 - atalhos de cantos param de funcionar no Unity | Blog | Fabrício Oliveira</title>
+    <meta name="description" content="Sou Desenvolvedor Front-end em São Pedro da Aldeia-RJ. Esse é meu blog onde espero compartilhar o que estou aprendendo!">
+    <meta name="google-site-verification" content="3AZAhAyP2PJPFC1SDKGINpQDlfD_yfRQpVoh_yfjiyY" />
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ubuntu 16.04 - atalhos de cantos param de funcionar no Unity | Fabrício Oliveira">
+    <meta property="og:url" content="http://fabriciolo.com">
+    <meta property="og:image" content="http://fabriciolo.com/assets/img/thumbnail01.jpg">
+    <meta property="og:image" content="http://fabriciolo.com/assets/img/thumbnail02.jpg">
+    <meta property="og:image" content="http://fabriciolo.com/assets/img/thumbnail03.jpg">
+    <meta property="og:description" content="Esse é meu blog onde espero compartilhar o que estou aprendendo!">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fabloliv">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#E70388">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#E70388">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#E70388">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/newfavicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/prism/prism.css">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1156687-2', 'auto');
+        ga('send', 'pageview');
+      </script>
+    </head>
+
+<body class="blog language-bash" itemscope itemtype="http://schema.org/Person">
+    <nav id="site-navigation" class="main-nav" role="navigation" aria-label="Top Menu">
+    <ul id="navigation" class="top-nav">
+        <li >
+            <a href="/">home</a>
+        </li>
+        <li  class="active">
+            <a href="/blog/">blog</a>
+        </li>
+    </ul>
+</nav>
+    
+    <div class="intro-container">
+      <div class="wrapper cf">
+
+          <h1 class="name" rel="author" itemprop="name">Fabrício Oliveira</h1>
+          <h2 class="job-title"><span itemprop="jobTitle">Desenvolvedor Front-end</span></h2>
+
+          <ul class="social-links group">
+              <li><a rel="me" itemprop="url" href="https://github.com/fabloliv" class="icon icon-github" title="GitHub"><span class="screen-reader-text">GitHub</span></a></li>
+              <li><a rel="me" itemprop="url" href="http://br.linkedin.com/in/fabriciolo/" class="icon icon-linkedin2" title="LinkedIn"><span class="screen-reader-text">LinkedIn</span></a></li>
+              <li><a rel="me" itemprop="url" href="https://www.facebook.com/fabloliv/" class="icon icon-facebook" title="Facebook"><span class="screen-reader-text">Facebook</span></a></li>
+              <li><a rel="me" itemprop="url" href="http://twitter.com/fabloliv" class="icon icon-twitter" title="Twitter"><span class="screen-reader-text">Twitter</span></a></li>
+              <li><a rel="author" itemprop="url" href="https://plus.google.com/104978548561595646334" class="icon icon-google-plus" title="Google Plus"><span class="screen-reader-text">Google Plus</span></a></li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="skillcloud-container">
+      <div class="wrapper cf">
+          <h3 class="page-title">Blog</h3>
+      </div>
+    </div>
+
+    <div class="portfolio-container">
+      <div class="wrapper cf">
+          <article class="article">
+
+              <h1 class="article-title">Ubuntu 16.04 - atalhos de cantos param de funcionar no Unity</h1>
+
+              <span class="article-published">
+                <time datetime="2018-11-03">
+                    03/11/2018
+                </time>
+              </span>
+
+              <section class="article-content">
+                <p>Corrigindo na gambiarra o problema das <strong>Hot Corners</strong> ou <strong>atalho de cantos</strong> que param de funcionar após o boot no Ubuntu 16.04 (Unity). Gosto de usar o canto superior esquerdo pra espalhar todas as janelas de aplicativos abertos e o inferior direito pra mostrar as áreas de trabalho.</p>
+<p>Em algum momento isso parou de funcionar, só voltava após ativar e desativar essa funcionalidade na ferramenta de ajuste do Unity ou reiniciando o sistema. Depois descobri que é necessário reiniciar o gerenciador de janelas via terminal com o comando <code>sudo systemctl restart lightdm.service</code>.</p>
+<p>Depois descobri uma solução mais simples: <code>unity --replace</code> que podia ser acionado com <code>ALT + F2</code> na janela "Executar um comando".</p>
+<p>Até onde pesquisei não há uma solução pra esse problema, além de trocar o Unity por outra interface, o que não me atenderia por enquanto (uso Unity pela agilidade e XFCE quando preciso de RAM sobrando!).</p>
+<p>Fui pesquisar uma forma de pelo menos automatizar esse processo, foi aí que descobri como transformar em um script e carregar após login na inicialização sem ter que ir no <code>ALT + F2</code>.</p>
+<p>Criei um script <a href="https://ubuntuforums.org/showthread.php?t=2339727/" title="Compiz's hotcorners stop to work after boot, but comeback after I kill its process">baseado nessa thread</a> e fiz uma leve modificação:</p>
+<pre><code>#!/bin/bash
+#fix scale hot corner
+sleep 6
+unity --replace
+exit 0
+</code></pre>
+<p>O script aguarda 6 segundos até executar <code>unity --replace</code> e encerrar. A desvantagem é ver a interface ser recarregada após o login, mas diminuindo o tempo de <em>sleep</em> quase não se percebe pois é rápido.</p>
+<p>Salvei o script como <em>fixhotcorner</em> na pasta <em>home/user/bin</em> e o tornei executável com <code>chmod +x fixhotcorner</code>.</p>
+<p>Aṕos isso é só procurar por "Aplicativos iniciais de sessão" e adicionar o script executável informando o endereço do mesmo e é só reiniciar o sistema para testar!</p>
+              </section>
+
+          </article>
+      </div>
+    </div>
+
+    <footer>
+        <p class="copyright">&copy 2007-2018 Handcrafted by Fabrício Oliveira.</p>
+    </footer>
+    <div class="footer-pattern"></div>
+    <script src="/assets/prism/prism.js"></script>
+</body>
+</html>
