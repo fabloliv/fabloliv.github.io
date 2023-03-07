@@ -1,53 +1,47 @@
-# Meu site
+# Astro Starter Kit: Minimal
 
-Repositório com código fonte do [meu site e agora blog pessoal](https://fabloliv.github.io).
+```
+npm create astro@latest -- --template minimal
+```
 
-## Como foi feito
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-- [Statik](https://github.com/thanethomson/statik) - Gerador de Sites Estáticos feito em Python.
-- [Gulp](https://gulpjs.com) - Automatizador de tarefas usado para otimizar as imagens.
-- [SASS](https://sass-lang.com "Syntatically Awesome Style Sheets") - Pré-processador CSS.
-- [Prism](https://prismjs.com "Lightweight, robust, elegant syntax highlighting") - Estilização de blocos de código dos exemplos.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## Changelog:
+## 🚀 Project Structure
 
-### `v5.1.1` - 15-02-2023
+Inside of your Astro project, you'll see the following folders and files:
 
-- Remover metatags antigas.
-- Remover links para redes sociais desnecessários.
-- Atualizar links para projetos ainda online.
+```
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-### `v5.1.0` - 06-11-2018
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-- Adaptar estrutura antiga para o blog.
-- SCSS separado para blog/posts.
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-### `v5.0.0` - 19-10-2017
+Any static assets, like images, can be placed in the `public/` directory.
 
-- Novo tema e código reformulados!
-- Novo texto de apresentação!
-- Nova _skills cloud_
-- Adicionado portfolio com principais trabalhos recentes.
+## 🧞 Commands
 
-### `v4.1.2` - 21-07-2017
+All commands are run from the root of the project, from a terminal:
 
-- Atualizar links sociais.
-- Mudança pro Github Pages!
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Get help using the Astro CLI                     |
 
-### `v4.1.0` - 11-07-2013
+## 👀 Want to learn more?
 
-- Usando HTM/L5 Boilerplate.
-- Testes com SASS (mixins, variáveis e compressão).
-- Detecção de funcionalidades com Modernizr (css-gradient, css-transitions e no-touch).
-- Adicionado link pro Facebook.
-- Escrever um README decente em markdown!
-- TODO: otimizar 3º tema (laranja).
-
-### `v4.0.0` - 01-02-2013
-
-- Usando o framework HTML5Bones.
-- Testes com Microdata.
-- Webfonts usadas - Oswald e Open Sans, via Google Font.
-- iconfont - [IcoMoon](http://keyamoon.com/icomoon)
-- 4 temas, 1 HTML (Styleswitcher)
-- Responsive básico
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
