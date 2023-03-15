@@ -1,0 +1,344 @@
+// Descriptive color variables
+$violet: rgb(12, 6, 30); // Violet - body background
+$eminence: rgb(122, 42, 141); // Eminence - buttons background
+$rose: rgb(231, 3, 136); // Rose - for titles and text
+$moonMist: rgb(223, 226, 215); // Moon Mist - lighter color for text
+$pictonBlue: rgb(35, 192, 236); // Picton Blue -text and background color
+
+// Functional color variables
+$color-body: $violet;
+$color-buttons: $eminence;
+$color-main: $rose;
+$color-text-light: $moonMist;
+$color-text-base: $pictonBlue;
+
+// Font stack
+$roboto-font-stack: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$oswald-font-stack: "Oswald", sans-serif !default;
+
+// Functions
+@function em($pixels, $context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return calc($pixels / $context * 1em);
+}
+
+body {
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 1em;
+  font-weight: 400;
+  text-align: center;
+  font-family: $roboto-font-stack;
+  color: $color-text-light;
+  background-color: $color-body;
+  // HACK: Background error: In Chrome 61, CSS-created shapes are slightly lighter than the background color set for the "body" tag.
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+div[class*="container"] {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @include respond-to(medium) {
+    width: 70%;
+  }
+}
+
+/* # =================================================================
+   # Intro
+   # ================================================================= */
+
+.intro-container {
+  .wrapper {
+    padding-top: 5em;
+    padding-bottom: 4em;
+
+    @include respond-to(medium) {
+      padding-top: 8em;
+      padding-bottom: 8em;
+    }
+  }
+
+  .name {
+    font-family: $oswald-font-stack;
+    color: $color-main;
+    text-transform: uppercase;
+    line-height: 1em;
+    font-weight: 400;
+    font-size: em(34, 10);
+  }
+
+  .job-title {
+    font-family: $roboto-font-stack;
+    color: $color-text-base;
+    font-weight: 700;
+    font-size: em(22, 10);
+    line-height: 1em;
+    padding: em(5px, 22) 0 em(30px, 22);
+
+    @include respond-to(medium) {
+      // font-size: 2em;
+      // padding: em(10px, 20) 0 em(30px, 20);
+      // letter-spacing: em(1px, 20);
+    }
+  }
+
+  p {
+    font-size: em(16px, 10);
+    line-height: 150%;
+    margin-bottom: em(12, 16);
+
+    @include respond-to(medium) {
+      font-size: 2em;
+      width: 74%;
+      margin: 0 auto em(15, 20);
+    }
+  }
+}
+
+.social-links {
+  padding: em(20, 10) 0 0 0;
+
+  @include respond-to(medium) {
+    padding: em(50, 10) 0 0 0;
+    .blog & {
+      padding: 0;
+    }
+  }
+  li {
+    margin: 0.6em;
+    display: inline-block;
+    @include respond-to(medium) {
+      margin: 1em;
+    }
+  }
+  .icon {
+    background-color: $color-text-light;
+    display: block;
+    font-size: em(27px, 10);
+    width: em(42, 27);
+    height: em(42, 27);
+    line-height: em(42, 27);
+    border-radius: 50%;
+    color: $color-body;
+
+    -webkit-transition: color 300ms, background-color 300ms;
+    transition: color 300ms, background-color 300ms;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.icon-github {
+      &:hover {
+        background-color: #171516;
+      }
+    }
+
+    &.icon-linkedin2 {
+      &:hover {
+        background-color: #007bb6;
+      }
+    }
+
+    &.icon-facebook {
+      &:hover {
+        background-color: #3b5998;
+      }
+    }
+
+    &.icon-twitter {
+      &:hover {
+        background-color: #00aced;
+      }
+    }
+
+    &.icon-google-plus {
+      &:hover {
+        background-color: #dd4b39;
+      }
+    }
+  }
+}
+
+/* # =================================================================
+   # Skill Cloud
+   # ================================================================= */
+
+.skillcloud-container {
+  .wrapper {
+    padding: 6em 0;
+
+    border-top: 2px $color-main solid;
+    border-bottom: 2px $color-main solid;
+
+    @include respond-to(medium) {
+      padding: 8em 9em;
+
+      .blog & {
+        padding: 5em 0;
+      }
+    }
+  }
+}
+
+.skill-category {
+  display: none;
+}
+
+.skill-list {
+  font: {
+    family: $oswald-font-stack;
+    weight: 600;
+  }
+  text-transform: uppercase;
+  font-size: em(18, 10);
+
+  @include respond-to(medium) {
+    font-size: em(20, 10);
+  }
+
+  li {
+    display: inline-block;
+    color: $color-text-base;
+    line-height: 1em;
+    vertical-align: middle;
+    margin: 2px;
+
+    &:nth-child(odd) {
+      color: $color-main;
+    }
+
+    &.beginner {
+      font-size: 100%;
+    }
+    &.basic {
+      font-size: 150%;
+    }
+    &.intermediate {
+      font-size: 200%;
+    }
+    &.advanced {
+      font-size: 250%;
+    }
+  }
+}
+
+/* # =================================================================
+   # Portfolio
+   # ================================================================= */
+
+.portfolio-container {
+  .wrapper {
+    padding-bottom: 4em;
+  }
+}
+
+.portfolio-title {
+  font-family: $oswald-font-stack;
+  font-weight: 400;
+  font-size: 2.2em;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: em(1px, 22);
+  padding: em(100px, 22) 0 em(50px, 22);
+}
+
+.work {
+  padding-top: 5em;
+  padding-bottom: 4em;
+
+  &-year {
+    color: $color-main;
+    font-family: $oswald-font-stack;
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1;
+  }
+  &-title {
+    color: $color-text-base;
+    font-family: $roboto-font-stack;
+    font-size: 3.2em;
+    font-weight: 700;
+    line-height: 120%;
+    margin-top: em(7px, 32);
+  }
+  &-tags {
+    @extend .work-title;
+    font-size: 1.8em;
+    text-transform: lowercase;
+    display: block;
+    margin-bottom: em(30px, 18);
+    margin-top: em(10px, 18);
+  }
+  &-description {
+    font-size: 1.8em;
+    line-height: 140%;
+
+    @include respond-to(medium) {
+      width: 70%;
+      margin: 0 auto;
+    }
+    a {
+      color: $color-text-base;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    em {
+      font-style: italic;
+    }
+  }
+  &-img {
+    margin-top: 4em;
+    margin-bottom: 2em;
+  }
+  &-link {
+    @extend .work-title;
+    color: $color-text-light;
+    background-color: $color-buttons;
+    font-size: 2em;
+    display: inline-block;
+    margin: em(30px, 20) 0 0;
+    padding: em(15px, 20) em(35px, 20);
+    text-transform: uppercase;
+    letter-spacing: em(1px, 20);
+    line-height: 1em;
+
+    transition: background-color 200ms;
+
+    &:hover {
+      background-color: lighten($color-buttons, 20%);
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: em(60, 11);
+}
+
+.footer-pattern {
+  height: em(250px, 10);
+  background: linear-gradient(
+    -45deg,
+    $color-text-base 0%,
+    $color-text-base 50%,
+    $color-body 50%
+  );
+  background-color: $color-body;
+  background-size: 50px 50px;
+}
