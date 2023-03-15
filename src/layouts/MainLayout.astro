@@ -1,0 +1,66 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+// import "../assets/styles/global.css";
+import "@fontsource/oswald/400.css";
+import "@fontsource/oswald/600.css";
+
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/700.css";
+
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import "../assets/scss/main.scss";
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html class='no-js' lang='pt-br' dir='ltr'>
+  <head
+    prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'
+  >
+    <!-- Global Metadata -->
+    <meta charset='utf-8' />
+    <meta http-equiv='x-ua-compatible' content='ie=edge' />
+    <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='32x32'
+      href='/assets/img/newfavicon.png'
+    />
+    <meta name='generator' content={Astro.generator} />
+
+    <!-- Canonical URL -->
+    <link rel='canonical' href={canonicalURL} />
+
+    <!-- RSS Feed Discovery -->
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='RSS'
+      href='/rss.xml'
+    />
+
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body itemscope itemtype='http://schema.org/Person'>
+    <main>
+      <!-- <Nav /> -->
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
