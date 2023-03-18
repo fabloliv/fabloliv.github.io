@@ -1,54 +1,87 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import Layout from "../../layouts/MainLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class='intro-container'>
+    <div class='wrapper cf'>
+      <h1 class='name' rel='author' itemprop='name'>Fabrício Oliveira</h1>
+      <h2 class='job-title'>
+        <span itemprop='jobTitle'>Desenvolvedor Front-end</span>
+      </h2>
+
+      <p>
+        Sou Desenvolvedor Front-end e moro em <span itemprop='homeLocation'
+          >São Pedro da Aldeia-RJ</span
+        >.
+      </p>
+      <p>
+        Meu objetivo é construir sites para pequenas empresas, com foco em
+        performance, usabilidade, otimização para buscas (<abbr
+          title='Search Engine Optimization (Otimização para mecanismos de busca)'
+          >SEO</abbr
+        >) e adaptáveis aos diferentes dispositivos e contextos de uso.
+      </p>
+      <p>Estou disponível como freelancer ou para agências digitais.</p>
+
+      <ul class='social-links group'>
+        <li>
+          <a
+            rel='me'
+            itemprop='url'
+            href='https://github.com/fabloliv'
+            class='icon icon-github'
+            title='GitHub'><span class='screen-reader-text'>GitHub</span></a
+          >
+        </li>
+        <li>
+          <a
+            rel='me'
+            itemprop='url'
+            href='http://br.linkedin.com/in/fabriciolo/'
+            class='icon icon-linkedin2'
+            title='LinkedIn'><span class='screen-reader-text'>LinkedIn</span></a
+          >
+        </li>
+        <li>
+          <a
+            rel='me'
+            itemprop='url'
+            href='http://twitter.com/fabloliv'
+            class='icon icon-twitter'
+            title='Twitter'><span class='screen-reader-text'>Twitter</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='skillcloud-container'>
+    <div class='wrapper cf'>
+      <h3 class='page-title'>Blog</h3>
+    </div>
+  </div>
+
+  <div class='portfolio-container'>
+    <div class='wrapper cf'>
+      {
+        posts.map((post) => (
+          <article class='post'>
+            <FormattedDate date={post.data.pubDate} />
+            <h2 class='post-title'>
+              <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+            </h2>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
