@@ -2,10 +2,16 @@
 export interface Props {
   title: string;
   description: string;
+  ogtype: string;
   image?: string;
 }
 
-const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
+const {
+  title,
+  description,
+  ogtype = "website",
+  image = "/placeholder-social.jpg",
+} = Astro.props;
 ---
 
 <!-- Primary Meta Tags -->
@@ -16,7 +22,7 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property='og:locale' content='pt_BR' />
-<meta property='og:type' content='website' />
+<meta property='og:type' content={ogtype} />
 <meta property='og:url' content={Astro.url} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
