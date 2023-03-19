@@ -1,37 +1,27 @@
 ---
 import Layout from "../../layouts/MainLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { BLOG_PAGE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Layout
+  title={BLOG_PAGE_TITLE}
+  description={SITE_DESCRIPTION}
+  ogtype='blog'
+  class='blog'
+>
   <div class='intro-container'>
     <div class='wrapper cf'>
       <h1 class='name' rel='author' itemprop='name'>Fabrício Oliveira</h1>
       <h2 class='job-title'>
         <span itemprop='jobTitle'>Desenvolvedor Front-end</span>
       </h2>
-
-      <p>
-        Sou Desenvolvedor Front-end e moro em <span itemprop='homeLocation'
-          >São Pedro da Aldeia-RJ</span
-        >.
-      </p>
-      <p>
-        Meu objetivo é construir sites para pequenas empresas, com foco em
-        performance, usabilidade, otimização para buscas (<abbr
-          title='Search Engine Optimization (Otimização para mecanismos de busca)'
-          >SEO</abbr
-        >) e adaptáveis aos diferentes dispositivos e contextos de uso.
-      </p>
-      <p>Estou disponível como freelancer ou para agências digitais.</p>
-
       <ul class='social-links group'>
         <li>
           <a

@@ -17,6 +17,7 @@ import "../assets/scss/main.scss";
 export interface Props {
   title: string;
   description: string;
+  class?: String;
   ogtype?: string;
   image?: string;
 }
@@ -26,6 +27,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
   title,
   description,
+  class: className,
   ogtype = "website",
   image = "/placeholder-social.jpg",
 } = Astro.props;
@@ -62,7 +64,7 @@ const {
     <BaseHead title={title} description={description} ogtype={ogtype} />
   </head>
 
-  <body itemscope itemtype='http://schema.org/Person'>
+  <body class:list={[className]} itemscope itemtype='http://schema.org/Person'>
     <main>
       <Nav />
       <slot />
