@@ -3,101 +3,107 @@
    # ================================================================= */
 
 .page-title {
-    font-family: $oswald-font-stack;
-    font-weight: 400;
-    font-size: 4em;
-    line-height: 1em;
-    text-transform: uppercase;
-    letter-spacing: em(1px, 32);
-
+  font-family: $oswald-font-stack;
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: em(1px, 32);
 }
 
 .post {
-    width: 90%;
-    margin: 6em auto 0;
-    padding: 2em 0;
+  width: 90%;
+  margin: 6em auto 0;
+  padding: 2em 0;
 }
 
 .post-published {
-    display: block;
-    font-size: 1.6em;
-    letter-spacing: em(1px, 16px);
-    line-height: 2em;
-    font-weight: 400;
-    color: $color-main;
-    font-family: $oswald-font-stack;
+  display: block;
+  font-size: 1.6em;
+  letter-spacing: em(1px, 16px);
+  line-height: 2em;
+  font-weight: 400;
+  color: $color-main;
+  font-family: $oswald-font-stack;
 }
 
 .post-title {
-    font-size: 3em;
-    font-weight: 700;
-    line-height: 120%;
-    a {
-        color: $color-text-base;
-        border-bottom: 3px $eminence solid;
-        line-height: 140%;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 120%;
+  a {
+    color: $color-text-base;
+    border-bottom: 3px $eminence solid;
+    line-height: 140%;
 
-        -webkit-transition: color 300ms, background-color 300ms;
-        transition: color 300ms, background-color 300ms;
+    -webkit-transition: color 300ms, background-color 300ms;
+    transition: color 300ms, background-color 300ms;
 
-        &:hover {
-            color: $moonMist;
-            background-color: $eminence;
-        }
+    &:hover {
+      color: $moonMist;
+      background-color: $eminence;
     }
+  }
 }
 
 /* # =================================================================
    # Article
    # ================================================================= */
 
-.article  {
-    font-size: 1.6em;
+.article {
+  font-size: 1.6em;
 
-    @include respond-to(tablet) {
-        width: 70%;
-        margin: 0 auto;
-    }
+  @include respond-to(tablet) {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 .article-title {
-    font-size: em(30, 16);
-    font-weight: 700;
-    line-height: 120%;
-    padding: 60px 0 0 0;
-    color: $color-text-base;
+  font-size: em(30, 16);
+  font-weight: 700;
+  line-height: 120%;
+  padding: 60px 0 0 0;
+  color: $color-text-base;
 }
 
 .article-published {
-    display: block;
-    font-size: 16px;
-    letter-spacing: em(1px, 16px);
-    line-height: 4em;
-    font-weight: 400;
-    color: $color-main;
-    font-family: $oswald-font-stack;
+  display: block;
+  font-size: 16px;
+  letter-spacing: em(1px, 16px);
+  line-height: 4em;
+  font-weight: 400;
+  color: $color-main;
+  font-family: $oswald-font-stack;
 }
 
 .article-content {
-    text-align: left;
-    p {
-        line-height: 160%;
-        margin: 0 0 24px 0;
+  text-align: left;
+  h3 {
+    font-size: em(18, 16);
+    font-weight: 700;
+    line-height: 120%;
+    color: $color-text-base;
+    padding: 0 0 25px 0;
+  }
+  p {
+    line-height: 160%;
+    margin: 0 0 25px 0;
+  }
+  a {
+    color: $color-text-base;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
-    a {
-        color: $color-text-base;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    code {
-        font-size: 90%;
-        padding: 3px 5px !important;
-        background-color: #221c31;
-        line-height: 166%;
-        overflow: auto;
-        font-weight: 400;
-        color: #FFF;
-        border-radius: 3px;
-    }
+  }
+  code {
+    font-size: 90%;
+    padding: 3px 5px !important;
+    // background-color: #221c31;
+    line-height: 166%;
+    overflow: auto;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 3px;
+  }
 }
