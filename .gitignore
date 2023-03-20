@@ -10,6 +10,9 @@ node_modules/
 source/
 dist_old/
 
+# ignore global
+!public/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
