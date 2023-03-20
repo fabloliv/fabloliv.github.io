@@ -1,12 +1,12 @@
 ---
-const { date } = Astro.props;
+const { date, class: className = "post-published" } = Astro.props;
 
 const day = ("0" + date.getUTCDate()).slice(-2);
 const month = ("0" + (date.getUTCMonth() + 1)).slice(-2);
 const year = date.getUTCFullYear();
 ---
 
-<span class='post-published'>
+<span class:list={[className]}>
   <time datetime={date.toISOString()}>
     {`${day}/${month}/${year}`}
     {
