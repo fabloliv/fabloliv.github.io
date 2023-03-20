@@ -1,21 +1,82 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import Layout from "../../layouts/MainLayout.astro";
+import { BLOG_POST_TITLE } from "../../consts";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
 }
-type Props = CollectionEntry<'blog'>;
+type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data}>
-	<h1>{post.data.title}</h1>
-	<Content />
-</BlogPost>
+<Layout
+  title={post.data.title + BLOG_POST_TITLE}
+  description={post.data.summary}
+  ogtype='article'
+  class='blog language-bash'
+>
+  <div class='intro-container'>
+    <div class='wrapper cf'>
+      <h1 class='name' rel='author' itemprop='name'>Fabrício Oliveira</h1>
+      <h2 class='job-title'>
+        <span itemprop='jobTitle'>Desenvolvedor Front-end</span>
+      </h2>
+      <ul class='social-links group'>
+        <li>
+          <a
+            rel='me'
+            itemprop='url'
+            href='https://github.com/fabloliv'
+            class='icon icon-github'
+            title='GitHub'><span class='screen-reader-text'>GitHub</span></a
+          >
+        </li>
+        <li>
+          <a
+            rel='me'
+            itemprop='url'
+            href='http://br.linkedin.com/in/fabriciolo/'
+            class='icon icon-linkedin2'
+            title='LinkedIn'><span class='screen-reader-text'>LinkedIn</span></a
+          >
+        </li>
+        <li>
+          <a
+            rel='me'
+            itemprop='url'
+            href='http://twitter.com/fabloliv'
+            class='icon icon-twitter'
+            title='Twitter'><span class='screen-reader-text'>Twitter</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='skillcloud-container'>
+    <div class='wrapper cf'>
+      <h3 class='page-title'>Blog</h3>
+    </div>
+  </div>
+
+  <div class='portfolio-container'>
+    <div class='wrapper cf'>
+      <article class='article'>
+        <h1 class='article-title'>{post.data.title}</h1>
+        <FormattedDate date={post.data.pubDate} class='article-published' />
+        <section class='article-content'>
+          <Content />
+        </section>
+      </article>
+    </div>
+  </div>
+</Layout>
