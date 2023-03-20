@@ -3,15 +3,9 @@ export interface Props {
   title: string;
   description: string;
   ogtype: string;
-  image?: string;
 }
 
-const {
-  title,
-  description,
-  ogtype = "website",
-  image = "/placeholder-social.jpg",
-} = Astro.props;
+const { title, description, ogtype = "website" } = Astro.props;
 ---
 
 <!-- Primary Meta Tags -->
@@ -27,19 +21,9 @@ const {
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
 
-<meta property='og:image' content={new URL(image, Astro.url)} />
-<!-- <meta
-  property='og:image'
-  content='http://fabriciolo.com/assets/img/thumbnail01.jpg'
-/>
-<meta
-  property='og:image'
-  content='http://fabriciolo.com/assets/img/thumbnail02.jpg'
-/>
-<meta
-  property='og:image'
-  content='http://fabriciolo.com/assets/img/thumbnail03.jpg'
-/> -->
+<meta property='og:image' content={`${Astro.site}assets/img/thumbnail01.jpg`} />
+<meta property='og:image' content={`${Astro.site}assets/img/thumbnail02.jpg`} />
+<meta property='og:image' content={`${Astro.site}assets/img/thumbnail03.jpg`} />
 
 <!-- Twitter -->
 <meta property='twitter:site' content='@fabloliv' />
@@ -47,7 +31,6 @@ const {
 <meta property='twitter:url' content={Astro.url} />
 <meta property='twitter:title' content={title} />
 <meta property='twitter:description' content={description} />
-<meta property='twitter:image' content={new URL(image, Astro.url)} />
 
 <!-- Chrome, Firefox OS and Opera -->
 <meta name='theme-color' content='#E70388' />

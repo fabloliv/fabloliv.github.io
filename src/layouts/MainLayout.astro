@@ -19,7 +19,6 @@ export interface Props {
   description: string;
   class?: String;
   ogtype?: string;
-  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -29,7 +28,6 @@ const {
   description,
   class: className,
   ogtype = "website",
-  image = "/placeholder-social.jpg",
 } = Astro.props;
 ---
 
