@@ -6,7 +6,13 @@ type Props = HTMLAttributes<"a">;
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+
+let testPath = pathname.split("/", 2);
+let testHref = href.slice(1);
+// console.log(testHref === testPath[1]);
+
+// const isActive = href === pathname || href === pathname.replace(/\/+$/, "");
+const isActive = href === pathname || testHref === testPath[1];
 ---
 
 <li class:list={[className, { active: isActive }]} {...props}>
