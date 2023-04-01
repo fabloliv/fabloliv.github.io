@@ -89,6 +89,18 @@
     line-height: 160%;
     margin: 0 0 25px 0;
   }
+
+  ul li,
+  ol li {
+    line-height: 160%;
+    margin: 0 0 15px 0;
+    list-style-position: inside;
+  }
+
+  ul li {
+    list-style-type: square;
+  }
+
   a {
     color: $color-text-base;
     text-decoration: none;
@@ -99,7 +111,6 @@
   code {
     font-size: 90%;
     padding: 3px 5px !important;
-    // background-color: #221c31;
     line-height: 166%;
     overflow: auto;
     font-weight: 400;
