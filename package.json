@@ -1,7 +1,27 @@
 {
-  "name": "personal-site",
+  "name": "my-site-v6",
   "type": "module",
   "version": "6.0.0",
+  "description": "My personal website.",
+  "keywords": [
+    "personal-site",
+    "astrojs",
+    "ssg",
+    "blog",
+    "css",
+    "astro",
+    "front-end",
+    "static-site"
+  ],
+  "browserslist": [
+    "defaults"
+  ],
+  "author": "Fabrício Oliveira <fabriciololiveira@gmail.com> (https://fabloliv.github.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabloliv/fabloliv.github.io.git"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
