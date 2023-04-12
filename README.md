@@ -1,69 +1,66 @@
-# Astro Starter Kit: Blog
+# Meu site
 
-```
-npm create astro@latest -- --template blog
-```
+Repositório do [meu site pessoal](https://fabloliv.github.io). Atualmente feito com [Astro 2.2](https://docs.astro.build).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+## 📝 TODO
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [ ] Melhorar o README;
+- [ ] Pensar em novo design;
+- [ ] Trocar nuvem de skills por seção com últimos projetos;
+- [ ] Parar de usar Google Fonts;
+- [ ] Trocar PrimJS por Shiki;
+- [ ] Atualizar CSS;
 
+## 🛠 Como a versão anterior foi construída
 
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
+- [Statik](https://github.com/thanethomson/statik) - Gerador de Sites Estáticos feito em Python.
+- [Gulp](https://gulpjs.com) - Automatizador de tarefas usado para otimizar as imagens.
+- [SASS](https://sass-lang.com "Syntatically Awesome Style Sheets") - Pré-processador CSS.
+- [Prism](https://prismjs.com "Lightweight, robust, elegant syntax highlighting") - Estilização de blocos de código dos exemplos.
 
-Features:
+## Changelog:
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+### `v6.0.0` - 20-03-2023
 
-## 🚀 Project Structure
+- Conversão completa para Astro 2.1.
 
-Inside of your Astro project, you'll see the following folders and files:
+### `v5.1.1` - 15-02-2023
 
-```
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+- Remover metatags antigas.
+- Remover links para redes sociais desnecessários.
+- Atualizar links para projetos ainda online.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### `v5.1.0` - 06-11-2018
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Adaptar estrutura antiga para o blog.
+- SCSS separado para blog/posts.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+### `v5.0.0` - 19-10-2017
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Novo tema e código reformulados!
+- Novo texto de apresentação!
+- Nova _skills cloud_
+- Adicionado portfolio com principais trabalhos recentes.
 
-## 🧞 Commands
+### `v4.1.2` - 21-07-2017
 
-All commands are run from the root of the project, from a terminal:
+- Atualizar links sociais.
+- Mudança pro Github Pages!
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+### `v4.1.0` - 11-07-2013
 
-## 👀 Want to learn more?
+- Usando HTM/L5 Boilerplate.
+- Testes com SASS (mixins, variáveis e compressão).
+- Detecção de funcionalidades com Modernizr (css-gradient, css-transitions e no-touch).
+- Adicionado link pro Facebook.
+- Escrever um README decente em markdown!
+- TODO: otimizar 3º tema (laranja).
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### `v4.0.0` - 01-02-2013
 
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- Usando o framework HTML5Bones.
+- Testes com Microdata.
+- Webfonts usadas - Oswald e Open Sans, via Google Font.
+- iconfont - [IcoMoon](http://keyamoon.com/icomoon)
+- 4 temas, 1 HTML (Styleswitcher)
+- Responsive básico
