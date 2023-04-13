@@ -35,7 +35,8 @@
     "@astrojs/sitemap": "^1.2.2",
     "@fontsource/oswald": "^4.5.12",
     "@fontsource/roboto": "^4.5.8",
-    "astro": "^2.2.2"
+    "astro": "^2.2.2",
+    "astro-compress": "^1.1.35"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
